@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /message/
+Disallow: /api/
+Disallow: /search
+Disallow: /ajax/
+Sitemap: https://edmovinn.com/sitemap.xml
