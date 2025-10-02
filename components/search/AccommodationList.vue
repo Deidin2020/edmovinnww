@@ -3,9 +3,9 @@
     <div data-state="active" data-orientation="horizontal" role="tabpanel"
         aria-labelledby="radix-:ra:-trigger-accommodations" id="radix-:ra:-content-accommodations" tabindex="0"
         class="ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 mt-4 sm:mt-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6" v-for="(accommodation, index) in accommodations">
 
-            <AccommodationBox :accommodation="accommodation" v-for="(accommodation, index) in accommodations" />
+            <AccommodationBox :accommodation="accommodation" />
 
         </div>
         <div class="col-12">
