@@ -1,19 +1,12 @@
 <template>
   <div class="university-program-area">
-    <div class="container">
-      <div class="row">
-        <SectionTitle alignment="section-left m-0 p-0 urlButton row" :title="title" :urlTitle="$t('view_all')"
-          :urlLink="localePath('/accommodation')" extraClass="color-303DBF" :titleClass="titleClass" />
-
-        <div class="container p-0 m-0">
-          <div class="row p-0">
-            <swiper ref="swiper" class="uni-box-swiper swiper m-0" :options="swiperOptions">
-              <div class="program-box-university swiper-slide" v-for="(item, index) in items" :key="index">
-                <RoomBox :room="item" />
-              </div>
-            </swiper>
+    <div class="container p-0 m-0">
+      <div class="row p-0">
+        <swiper ref="swiper" class="uni-box-swiper swiper m-0" :options="swiperOptions">
+          <div class="program-box-university swiper-slide" v-for="(item, index) in items" :key="index">
+            <RoomBox :room="item" />
           </div>
-        </div>
+        </swiper>
       </div>
     </div>
   </div>
@@ -36,7 +29,7 @@ export default {
   data() {
     return {
       swiperOptions: {
-        slidesPerView: 2.5,
+        slidesPerView: 3,
         loop: false,
         navigation: {
           nextEl: '.swiper-btn-prv',
@@ -44,7 +37,7 @@ export default {
         },
         breakpoints: {
           3000: { slidesPerView: 3 },
-          1200: { slidesPerView: 2.5 },
+          1200: { slidesPerView: 3 },
           992: { slidesPerView: 2.5 },
           760: { slidesPerView: 2.5 },
           0: { slidesPerView: 1 },
@@ -62,3 +55,10 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+.swiper-slide {
+  margin-right: 15px;
+}
+</style>

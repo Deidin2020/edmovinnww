@@ -66,10 +66,12 @@
                             <rect width="18" height="18" x="3" y="4" rx="2"></rect>
                             <path d="M3 10h18"></path>
                         </svg><span class="text-green-600">{{ $t('accommodation.available_from') }}</span></div>
-                    <div class="font-medium text-sm sm:hidden">{{ room.size }}m²</div>
                     <div class="font-medium text-sm sm:hidden">{{ room.available_from }}</div>
-                    <div class="hidden sm:block font-medium">{{ room.size }}m²</div>
+                    <div class="font-medium text-sm sm:hidden">{{ room.size }}m²</div>
+
                     <div class="hidden sm:block font-medium">{{ room.available_from }}</div>
+                    <div class="hidden sm:block font-medium">{{ room.size }}m²</div>
+
                 </div>
                 <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-3 sm:mb-4 text-xs sm:text-sm">
                     <div><span class="text-muted-foreground block text-xs">{{ $t('accommodation.price') }}</span><span

@@ -1,49 +1,116 @@
 <template>
-    <div class="container">
-
-        <div class="about-university-area">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12">
-                        <div class="main-title-university">
-                            <h2 class="title" style=" font-size: 25px; margin-top: 25px;">
-                                {{ $t('accommodation.room_summary') }} :
-                            </h2>
-                        </div>
+    <div>
+        <div class="bg-secondary/20 rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-foreground mb-4">Room Summary</h2>
+            <p class="text-muted-foreground" v-if="item.description">{{ item.description }}</p>
+        </div>
+        <div class="bg-card rounded-lg border border-border p-6 mb-8">
+            <h2 class="text-xl font-semibold text-foreground mb-6">About The Room :</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-house w-4 h-4 text-primary">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                                <path
+                                    d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                                </path>
+                            </svg><span class="text-muted-foreground">Housing Type</span></div><span class="font-medium"
+                            v-if="item.accommodation">{{ item.accommodation?.name }}</span>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="university-details-content">
-                            <span>{{ stripHtml(itemProp.description) }}</span>
-                        </div>
+                    <div class="flex items-center justify-between" v-if="item.room_types?.name">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-building2 w-4 h-4 text-primary">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M10 6h4"></path>
+                                <path d="M10 10h4"></path>
+                                <path d="M10 14h4"></path>
+                                <path d="M10 18h4"></path>
+                            </svg><span class="text-muted-foreground">Room Type</span></div><span class="font-medium">
+                            {{ item.room_types?.name }}</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-calendar w-4 h-4 text-primary">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg><span class="text-muted-foreground">Accommodation Type</span></div><span
+                            class="font-medium">Monthly</span>
+                    </div>
+                    <div class="flex items-center justify-between" v-if="item.floor">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-building2 w-4 h-4 text-primary">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M10 6h4"></path>
+                                <path d="M10 10h4"></path>
+                                <path d="M10 14h4"></path>
+                                <path d="M10 18h4"></path>
+                            </svg><span class="text-muted-foreground">Floor</span></div><span class="font-medium">
+                            {{ item.floor }}</span>
                     </div>
                 </div>
-            </div>
-
-        </div>
-        <div class="about-university-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-title-university">
-                            <h2 class="title" style=" font-size: 25px; margin-top: 25px;">
-                                {{ $t('accommodation.about_room') }} :
-                            </h2>
-                        </div>
+                <div class="space-y-4" v-if="item.area">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-maximize w-4 h-4 text-primary">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                                <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+                                <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+                                <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+                            </svg><span class="text-muted-foreground">Area</span></div><span class="font-medium">
+                            {{ item.area }}m²</span>
                     </div>
-                    <div class="row program-detail-box-area">
-                        <div class="col-md-12" v-for="(feature, index) in details" :key="index"
-                            v-if="feature && feature.display">
-                            <div class="program-detail-box" :class="feature.colorClass">
-                                <div class="content">
-                                    <div class="main">
-                                        <span v-html="feature.imgSrc" :title="feature.title" class="icon"></span>
-                                        <h3 class="title">{{ feature.title }}</h3>
-                                    </div>
-                                    <p>{{ feature.details }} <br><span>{{ feature.spanDetails }} </span></p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flex items-center justify-between" v-if="item.housing_fee">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-users w-4 h-4 text-primary">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg><span class="text-muted-foreground">Price</span></div><span class="font-medium">
+                            {{ item.housing_fee }} {{ item.currency }}</span>
+                    </div>
+                    <div class="flex items-center justify-between" v-if="item.available_from">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-calendar w-4 h-4 text-green-600">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg><span class="text-muted-foreground">Available From</span></div><span
+                            class="font-medium">{{ item.available_from }}</span>
+                    </div>
+                    <div class="flex items-center justify-between" v-if="item.available_to">
+                        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-calendar w-4 h-4 text-red-600">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg><span class="text-muted-foreground">Available To</span></div><span
+                            class="font-medium">{{ item.available_to }}</span>
                     </div>
                 </div>
             </div>
