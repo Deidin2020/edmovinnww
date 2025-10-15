@@ -3,7 +3,7 @@
         <div class="min-h-screen bg-background">
             <div class="bg-white border-b border-border px-4 py-3">
                 <div class="max-w-7xl mx-auto flex items-center gap-2 text-sm"><a
-                        class="text-muted-foreground hover:text-primary transition-colors" href="/"><svg
+                        class="text-muted-foreground hover:text-primary transition-colors" :href="localePath('/')"><svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-arrow-left w-4 h-4">
@@ -11,7 +11,7 @@
                             <path d="M19 12H5"></path>
                         </svg></a><span class="text-muted-foreground">/</span><a
                         class="text-muted-foreground hover:text-primary transition-colors"
-                        href="/">Accommodations</a><span class="text-muted-foreground">/</span><span
+                        :href="localePath('/')">Accommodations</a><span class="text-muted-foreground">/</span><span
                         class="text-foreground font-medium" v-if="item.name">{{ item.name }}</span></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 py-6">

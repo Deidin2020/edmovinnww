@@ -5,7 +5,8 @@
                 <div
                     class="aspect-[21/9] rounded-2xl overflow-hidden bg-gradient-to-br from-green-primary/10 to-gold-primary/10 border-2 border-gold-primary/20">
                     <img src="/assets/hero-about-new-CIJYpUxp.png" alt="Movinn Öğrenci Yurdu Hero"
-                        class="w-full h-full object-cover"></div>
+                        class="w-full h-full object-cover">
+                </div>
             </div>
             <div class="space-y-4">
                 <h1 class="text-4xl md:text-5xl font-bold text-green-primary">Movinn Öğrenci Yurdu</h1>
@@ -132,7 +133,8 @@
                 <div
                     class="aspect-[3/1] rounded-xl overflow-hidden bg-gradient-to-br from-green-primary/10 to-gold-primary/10 border border-gold-primary/20">
                     <img src="/assets/mall-istanbul-hero-CtsvBOyl.webp" alt="Mall of Istanbul ve Çevre - Kolay Ulaşım"
-                        class="w-full h-full object-cover"></div>
+                        class="w-full h-full object-cover">
+                </div>
             </div>
         </section>
         <section class="space-y-8">
@@ -153,7 +155,8 @@
                                 stroke-linejoin="round" class="lucide lucide-clock h-5 w-5 text-gold-primary">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>Yürüme Mesafesinde</h3>
+                            </svg>Yürüme Mesafesinde
+                        </h3>
                     </div>
                     <div class="p-6 pt-0 space-y-4">
                         <div
@@ -241,7 +244,8 @@
                                 </path>
                                 <path d="M22 10v6"></path>
                                 <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-                            </svg>Üniversitelere Kolay Ulaşım</h3>
+                            </svg>Üniversitelere Kolay Ulaşım
+                        </h3>
                     </div>
                     <div class="p-6 pt-0 space-y-3 max-h-96 overflow-y-auto">
                         <div
@@ -250,7 +254,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/altinbas-university-BFjF5TWK.jpg" alt="Altınbaş Üniversitesi logo"
-                                        class="w-8 h-8 object-contain"></div>
+                                        class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Altınbaş Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">otobüs</p>
@@ -281,7 +286,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/sabahattin-zaim-university-DxbK60kZ.jpg"
-                                        alt="Sabahattin Zaim Üniversitesi logo" class="w-8 h-8 object-contain"></div>
+                                        alt="Sabahattin Zaim Üniversitesi logo" class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Sabahattin Zaim Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">otobüs/metro</p>
@@ -315,7 +321,8 @@
                                         </path>
                                         <path d="M22 10v6"></path>
                                         <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-                                    </svg></div>
+                                    </svg>
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">İstanbul Özel Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro</p>
@@ -341,7 +348,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/istanbul-aydin-university-CWuviAf-.jpg"
-                                        alt="İstanbul Aydın Üniversitesi logo" class="w-8 h-8 object-contain"></div>
+                                        alt="İstanbul Aydın Üniversitesi logo" class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">İstanbul Aydın Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro</p>
@@ -367,7 +375,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/kultur-university-mMnMFioj.jpg" alt="Kültür Üniversitesi logo"
-                                        class="w-8 h-8 object-contain"></div>
+                                        class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Kültür Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro</p>
@@ -393,7 +402,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/beykent-university-new-DkRmgs1m.jpg"
-                                        alt="Beykent Üniversitesi logo" class="w-8 h-8 object-contain"></div>
+                                        alt="Beykent Üniversitesi logo" class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Beykent Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro + otobüs</p>
@@ -419,7 +429,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/istanbul-bilgi-university-BeCWtw1T.jpg"
-                                        alt="Bilgi Üniversitesi logo" class="w-8 h-8 object-contain"></div>
+                                        alt="Bilgi Üniversitesi logo" class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Bilgi Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro</p>
@@ -445,7 +456,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/nisantasi-university-new-27pHWj06.jpg"
-                                        alt="Nişantaşı Üniversitesi logo" class="w-8 h-8 object-contain"></div>
+                                        alt="Nişantaşı Üniversitesi logo" class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Nişantaşı Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro + otobüs</p>
@@ -471,7 +483,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/istinye-university-BjYNMcYp.jpg" alt="İstinye Üniversitesi logo"
-                                        class="w-8 h-8 object-contain"></div>
+                                        class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">İstinye Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">otobüs</p>
@@ -502,7 +515,8 @@
                                 <div
                                     class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-green-primary/20 overflow-hidden">
                                     <img src="/assets/gelisim-university-CCgYd3i4.jpg" alt="Gelişim Üniversitesi logo"
-                                        class="w-8 h-8 object-contain"></div>
+                                        class="w-8 h-8 object-contain">
+                                </div>
                                 <div>
                                     <p class="font-medium text-sm text-green-primary">Gelişim Üniversitesi</p>
                                     <p class="text-xs text-muted-foreground">metro + otobüs</p>
@@ -551,7 +565,8 @@
                                 <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
                                 <path d="M2 17h20"></path>
                                 <path d="M6 8v9"></path>
-                            </svg><span class="font-medium text-green-primary">Yatak</span></div>
+                            </svg><span class="font-medium text-green-primary">Yatak</span>
+                        </div>
                         <div
                             class="flex items-center gap-3 p-3 rounded-lg bg-green-primary/5 border border-green-primary/10 hover:border-green-primary/30 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -561,7 +576,8 @@
                                 <path
                                     d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16">
                                 </path>
-                            </svg><span class="font-medium text-green-primary">Çalışma masası</span></div>
+                            </svg><span class="font-medium text-green-primary">Çalışma masası</span>
+                        </div>
                         <div
                             class="flex items-center gap-3 p-3 rounded-lg bg-green-primary/5 border border-green-primary/10 hover:border-green-primary/30 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -571,7 +587,8 @@
                                 <path
                                     d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
                                 </path>
-                            </svg><span class="font-medium text-green-primary">Kişisel dolap</span></div>
+                            </svg><span class="font-medium text-green-primary">Kişisel dolap</span>
+                        </div>
                         <div
                             class="flex items-center gap-3 p-3 rounded-lg bg-green-primary/5 border border-green-primary/10 hover:border-green-primary/30 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -582,7 +599,8 @@
                                 <path d="M2 8.82a15 15 0 0 1 20 0"></path>
                                 <path d="M5 12.859a10 10 0 0 1 14 0"></path>
                                 <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
-                            </svg><span class="font-medium text-green-primary">Yüksek hızlı internet</span></div>
+                            </svg><span class="font-medium text-green-primary">Yüksek hızlı internet</span>
+                        </div>
                         <div
                             class="flex items-center gap-3 p-3 rounded-lg bg-green-primary/5 border border-green-primary/10 hover:border-green-primary/30 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -590,7 +608,8 @@
                                 stroke-linejoin="round"
                                 class="lucide lucide-thermometer h-5 w-5 text-gold-primary flex-shrink-0">
                                 <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
-                            </svg><span class="font-medium text-green-primary">Merkezi ısıtma-soğutma</span></div>
+                            </svg><span class="font-medium text-green-primary">Merkezi ısıtma-soğutma</span>
+                        </div>
                         <div
                             class="flex items-center gap-3 p-3 rounded-lg bg-green-primary/5 border border-green-primary/10 hover:border-green-primary/30 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -600,7 +619,8 @@
                                 <rect width="20" height="14" x="2" y="5" rx="2"></rect>
                                 <line x1="2" x2="22" y1="10" y2="10"></line>
                             </svg><span class="font-medium text-green-primary">Elektronik öğrenci kartı ile giriş
-                                sistemi</span></div>
+                                sistemi</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -775,7 +795,8 @@
                     <div class="relative">
                         <div class="aspect-video rounded-lg overflow-hidden bg-muted border-2 border-gold-primary/20">
                             <img src="/assets/room-modern-C7u4OaaH.jpg" alt="Movinn Gallery 1"
-                                class="w-full h-full object-cover"></div><button
+                                class="w-full h-full object-cover">
+                        </div><button
                             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 absolute left-4 top-1/2 -translate-y-1/2 bg-green-primary/80 border-gold-primary/30 text-gold-primary backdrop-blur-sm hover:bg-green-primary hover:text-white"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

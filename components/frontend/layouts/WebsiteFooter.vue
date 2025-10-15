@@ -13,14 +13,18 @@
                 <div class="space-y-3">
                     <h4 class="font-semibold text-white">{{ $t('footer.quickLinks.title') }}</h4>
                     <div class="space-y-2">
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/">{{
-                            $t('footer.quickLinks.home') }}</a>
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/search">{{
-                            $t('footer.quickLinks.discover') }}</a>
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/about">{{
-                            $t('footer.quickLinks.about') }}</a>
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/contact">{{
-                            $t('footer.quickLinks.contact') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/')">{{
+                                $t('footer.quickLinks.home') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/search')">{{
+                                $t('footer.quickLinks.discover') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/about')">{{
+                                $t('footer.quickLinks.about') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/contact')">{{
+                                $t('footer.quickLinks.contact') }}</a>
                     </div>
                 </div>
 
@@ -77,8 +81,9 @@
                 <div class="space-y-3">
                     <h4 class="font-semibold text-white">{{ $t('footer.languages.title') }}</h4>
                     <div class="space-y-2">
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/">{{
-                            $t('footer.languages.turkish') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/')">{{
+                                $t('footer.languages.turkish') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/ar">{{
                             $t('footer.languages.arabic') }}</a>
                     </div>

@@ -17,11 +17,11 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-11 rounded-md px-8 bg-accent hover:bg-accent/90 text-white"
-              href="/search">
+              :href="localePath('/search')">
               {{ $t('hero.exploreButton') }}
             </a>
             <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium border h-11 rounded-md px-8 bg-white/10 border-white text-white hover:bg-white hover:text-primary"
-              href="/about">
+              :href="localePath('/about')">
               {{ $t('hero.aboutButton') }}
             </a>
           </div>
@@ -154,11 +154,11 @@
           <p class="text-xl mb-8 text-white/90">{{ $t('cta.subtitle') }}</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a class="inline-flex items-center justify-center gap-2 text-sm font-medium h-11 rounded-md px-8 bg-accent hover:bg-accent/90 text-white"
-              href="/search">
+              :href="localePath('/search')">
               {{ $t('cta.startNow') }}
             </a>
             <a class="inline-flex items-center justify-center gap-2 text-sm font-medium border h-11 rounded-md px-8 bg-white/10 border-white text-white hover:bg-white hover:text-primary"
-              href="/about">
+              :href="localePath('/about')">
               {{ $t('cta.moreInfo') }}
             </a>
           </div>

@@ -209,6 +209,9 @@ export default {
     },
     "rights": "© 2024 MovInn. All rights reserved.",
     "madeWith": "Made with ❤️ in Turkey"
-  }
+  },
+
+  /////////////////////// about page /////////////////////////
+  
 
 }

@@ -108,11 +108,11 @@
                             class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full text-xs sm:text-sm">
                             {{ $t('actions.see_more') }}
                         </button></a>
-
-                    <button @click="addToCart(room)" :disabled="!room.availability"
-                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 flex-1 text-xs sm:text-sm">
+                    <button @click="sendWhatsAppMessage(room)" :disabled="!room.availability"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 flex-1 text-xs sm:text-sm">
                         {{ room.availability ? $t('actions.book_now') : $t('actions.book_close') }}
                     </button>
+
                 </div>
             </div>
         </div>
@@ -170,6 +170,35 @@ export default {
                 this.$refs.applyModal.$refs.myModal.show();
             }
         },
+        sendWhatsAppMessage(room) {
+            if (!room.availability) return;
+
+            // رقم الواتساب الذي سيستقبل الرسالة (ضع رقمك هنا بصيغة دولية بدون +)
+            const phoneNumber = "905550448000"; // مثال: رقم في تركيا
+
+            // بناء نص الرسالة
+            const message = `
+Hello 👋
+I would like to book the following room:
+
+🏠 Room: ${room.name}
+🏢 Accommodation: ${room.accommodation?.name || 'N/A'}
+📍 Location: ${room.accommodation?.state || 'N/A'}
+💰 Price: ${room.price?.price} ${room.price?.currency} / ${room.price?.payment_per}
+💵 Deposit: ${room.price?.deposit} ${room.price?.currency}
+📅 Available From: ${room.available_from}
+📐 Size: ${room.size} m²
+
+Please provide more details. Thank you!
+    `;
+
+            // تحويل النص إلى رابط واتساب مشفر
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // فتح الرابط في نافذة جديدة
+            window.open(whatsappURL, "_blank");
+        }
+
     },
 };
 </script>

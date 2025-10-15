@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <a class="flex-shrink-0" href="/">
+                <a class="flex-shrink-0" :href="localePath('/')">
                     <img src="/assets/movinn-logo-Z5eRNoAw.jpg" style="height: 2.5rem;" alt="Movinn Logo"
                         class="h-10 w-auto object-contain" />
                 </a>
@@ -11,23 +11,22 @@
                 <!-- Navigation -->
                 <nav class="hidden md:flex items-center space-x-4">
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
-                        href="/">
+                        :href="localePath('/')">
                         {{ $t('header.home') }}
                     </a>
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
-                        href="/search">
+                        :href="localePath('/search')">
                         {{ $t('header.discover_room') }}
                     </a>
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
-                        href="/about">
+                        :href="localePath('/about')">
                         {{ $t('header.about') }}
                     </a>
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
-                        href="/contact">
+                        :href="localePath('/contact')">
                         {{ $t('header.contact') }}
                     </a>
                 </nav>
-
                 <!-- Right Section -->
                 <div class="hidden md:flex items-center space-x-3">
                     <!-- Dropdown Language -->
