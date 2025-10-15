@@ -101,30 +101,6 @@ export default {
         this.fetchRooms();
     },
     methods: {
-        getRoomSchema() {
-            if (!this.item) return {};
-
-            return {
-                "@context": "https://schema.org/",
-                "@id": `https://edmovinn.com/rooms/${this.item.slug}`,
-                "@type": "Course",
-                "name": this.item.name,
-                "description": this.item.description,
-
-                "publisher": {
-                    "@type": "Edmov",
-                    "name": "Edmov",
-                    "url": "https://edmovinn.com"
-                },
-
-                "provider": {
-                    "@type": "university",
-                    "name": this.item.university_name,
-                },
-                "image": [this.item.university_logo ?? 'https://edmovinn.com/images/logo/logo-dark.png'],
-
-            }
-        },
         async fetchRooms() {
             try {
                 const slug = encodeURIComponent(this.$route.params.slug);

@@ -2,7 +2,9 @@ export default {
   header: {
     home         : "Home",
     about_us     : "About Us",
+    about     : "About Us",
     contact_us   : "Contact Us",
+    contact   : "Contact Us",
     discover_room: "Discover Room",
     language     : "Language",
     arabic       : "Arabic",
@@ -156,4 +158,57 @@ export default {
     registration_closed   : 'registration closed',
     admission_file        : 'admission file'
   },
-};
+ "hero": {
+  "titleLine1": "Ideal Student Accommodation",
+  "titleLine2": "Starts Here",
+  "subtitle": "Safe, comfortable, and modern accommodation solutions for your university life",
+  "exploreButton": "Explore Accommodations",
+  "aboutButton": "About Us"
+},
+"stats": {
+  "students": "Happy Students",
+  "accommodations": "Accommodation Options",
+  "universities": "Partner Universities",
+  "support": "Support Services"
+},
+"whyChooseUs": {
+  "title": "Why Choose Us?",
+  "subtitle": "Modern facilities and professional services to make your student life easier",
+  "easySearch": { "title": "Easy Search", "desc": "Find the most suitable student accommodation easily with our advanced filtering system." },
+  "idealLocation": { "title": "Ideal Location", "desc": "Accommodation options located close to universities and with great transportation access." },
+  "safeEnvironment": { "title": "Safe Environment", "desc": "24/7 security, card access system, and safe living spaces." },
+  "qualityService": { "title": "Quality Service", "desc": "Modern facilities, cleaning services, and comfortable living areas." },
+  "socialLife": { "title": "Social Life", "desc": "Common areas, events, and social activities for an active campus life." },
+  "support247": { "title": "24/7 Support", "desc": "Professional support and assistance always available for you." }
+},
+"cta": {
+  "title": "Ready to Start Your University Life?",
+  "subtitle": "Find the best accommodation for you and make a secure reservation",
+  "startNow": "Start Now",
+  "moreInfo": "More Information"
+},
+ "footer": {
+    "description": "Your trusted partner for premium student accommodation in Turkey.",
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": {
+      "home": "Home",
+      "discover": "Discover Rooms",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "contactInfoTitle": "Contact Info",
+    "contact": {
+      "email": "operations@edmovinn.com",
+      "phone": "+90 XXX XXX XXXX",
+      "address": "Istanbul, Turkey"
+    },
+    "languagesTitle": "Languages",
+    "languages": {
+      "turkish": "🇹🇷 Turkish",
+      "arabic": "🇸🇦 Arabic"
+    },
+    "rights": "© 2024 MovInn. All rights reserved.",
+    "madeWith": "Made with ❤️ in Turkey"
+  }
+
+}

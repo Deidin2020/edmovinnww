@@ -1,6 +1,6 @@
 <template>
     <a class="block hover:scale-105 transition-transform duration-200"
-        :to="localePath('/accommodations/' + accommodation.slug)">
+        :href="localePath('/accommodations/' + accommodation.slug)">
         <div
             class="rounded-lg border text-card-foreground shadow-sm bg-card border-border hover:shadow-lg transition-shadow duration-200">
             <div class="p-4">

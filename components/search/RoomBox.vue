@@ -2,13 +2,16 @@
     <div>
         <div
             class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative"><img :src="room.image ?? '/img/search/default-room.jpg'"
-                    alt="Student Accommodation 7 Room 3 in Accommodation 7" class="w-full h-40 sm:h-48 object-cover">
-                <div v-for="(gender, index) in room.gender_map"
-                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 absolute top-2 left-2 text-xs bg-accommodation-female text-accommodation-female-text">
-                    {{ gender.name }}
+            <a :href="localePath('/rooms/' + room.slug)">
+                <div class="relative"><img :src="room.image ?? '/img/search/default-room.jpg'"
+                        alt="Student Accommodation 7 Room 3 in Accommodation 7"
+                        class="w-full h-40 sm:h-48 object-cover">
+                    <div v-for="(gender, index) in room.gender_map"
+                        class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 absolute top-2 left-2 text-xs bg-accommodation-female text-accommodation-female-text">
+                        {{ gender.name }}
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="p-3 sm:p-4">
                 <h3 class="font-semibold text-base sm:text-lg mb-2 sm:mb-3 line-clamp-2">
                     <a :href="localePath('/rooms/' + room.slug)">
@@ -74,14 +77,21 @@
 
                 </div>
                 <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-3 sm:mb-4 text-xs sm:text-sm">
-                    <div><span class="text-muted-foreground block text-xs">{{ $t('accommodation.price') }}</span><span
-                            class="font-bold text-base sm:text-lg">{{ room.price.price }}
-                            <span v-if="room.price.payment_method" class="cost_type"> / {{ room.price.payment_method
-                                }}</span></span></div>
-                    <div><span class="text-muted-foreground block text-xs">{{ $t('accommodation.deposit') }}</span><span
-                            class="font-medium text-sm">{{ room.price.deposit }}</span></div>
-                    <div><span class="text-muted-foreground block text-xs">{{ $t('accommodation.contract_type')
-                            }}</span><span class="font-medium text-sm truncate">{{ room.contract_type }}</span></div>
+                    <div>
+                        <span class="text-muted-foreground block text-xs">{{ $t('accommodation.price') }}</span>
+                        <span class="font-bold text-base sm:text-lg">{{ room.price.price }} {{ room.price.currency }}
+                            <span class="cost_type">
+                                / {{ room.price.payment_per }}</span>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="text-muted-foreground block text-xs">{{ $t('accommodation.deposit') }}</span>
+                        <span class="font-medium text-sm">{{ room.price.deposit }} {{ room.price.currency }}</span>
+                    </div>
+                    <div>
+                        <span class="text-muted-foreground block text-xs">{{ $t('accommodation.contract_type') }}</span>
+                        <span class="font-medium text-sm truncate">{{ room.price.contract_type }}</span>
+                    </div>
                 </div>
                 <div class="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                     <div v-for="(facility, index) in displayedFacilities" :key="index"
@@ -163,3 +173,10 @@ export default {
     },
 };
 </script>
+<style>
+.cost_type {
+    color: #848484;
+    font-weight: 400;
+    font-size: 11px;
+}
+</style>

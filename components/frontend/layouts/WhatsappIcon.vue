@@ -8,6 +8,8 @@
 
 <script>
 export default {
+  props: {
+  },
   name: "WhatsappIcon",
 };
 </script>

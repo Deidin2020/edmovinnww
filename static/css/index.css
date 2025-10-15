@@ -779,7 +779,7 @@ body {
 }
 
 .flex {
-    display: flex
+    display: flex;
 }
 
 .inline-flex {
@@ -2942,11 +2942,11 @@ body {
 }
 
 [dir=rtl] .grid, [dir=rtl] .flex {
-    direction: rtl
+    direction: rtl;
 }
 
 [dir=rtl] .justify-between {
-    flex-direction: row-reverse
+    flex-direction: row;
 }
 
 [dir=rtl] .justify-start {

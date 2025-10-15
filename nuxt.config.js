@@ -194,6 +194,14 @@ export default {
                 name: 'عربي',
                 flag: '/media/flags/saudi-arabia.svg'
             },
+             {
+                code: 'tr',
+                iso: 'tr-TR',
+                file: 'tr.js',
+                dir: 'ltr',
+                name: 'Turkish',
+                flag: '/media/flags/saudi-arabia.svg'
+            },
         ],
         vueI18n: {
             fallbackLocale: 'en'
