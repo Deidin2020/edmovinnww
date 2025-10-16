@@ -215,46 +215,77 @@ export default {
 
     // ///////////////////// contact page /////////////////////////
 
- 'contact': {
-  'title'                 : 'اتصل بنا',
-  'subtitle'              : 'تواصل مع فريقنا، نحن هنا لمساعدتك في العثور على مكان الإقامة المثالي.',
-  'form_title'            : 'أرسل لنا رسالة',
-  'form_description'      : 'املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.',
-  'first_name'            : 'الاسم الأول',
-  'last_name'             : 'اسم العائلة',
-  'email'                 : 'البريد الإلكتروني',
-  'phone'                 : 'رقم الهاتف (اختياري)',
-  'message'               : 'الرسالة',
-  'first_name_placeholder': 'أدخل اسمك الأول',
-  'last_name_placeholder' : 'أدخل اسم عائلتك',
-  'email_placeholder'     : 'أدخل عنوان بريدك الإلكتروني',
-  'phone_placeholder'     : 'أدخل رقم هاتفك (اختياري)',
-  'message_placeholder'   : 'أخبرنا عن احتياجاتك في الإقامة أو أرسل أسئلتك أو ملاحظاتك...',
-  'send_button'           : 'إرسال الرسالة',
-  'info_title'            : 'معلومات التواصل',
-  'info_description'      : 'تواصل معنا عبر أي من القنوات التالية.',
-  'email_label'           : 'البريد الإلكتروني',
-  'phone_label'           : 'الهاتف',
-  'office_label'          : 'المكتب',
-  'office_address'        : 'حي ليفنت\nشارع بويوك دره رقم 123\nشيشلي، إسطنبول، تركيا',
-  'office_hours'          : 'ساعات العمل',
-  'weekdays'              : 'من الإثنين إلى الجمعة',
-  'weekdays_hours'        : 'من 9:00 صباحًا حتى 6:00 مساءً',
-  'saturday'              : 'السبت',
-  'saturday_hours'        : 'من 10:00 صباحًا حتى 4:00 مساءً',
-  'sunday'                : 'الأحد',
-  'sunday_hours'          : 'مغلق'
-},
+  'contact': {
+    'title'                 : 'Contact Us',
+    'subtitle'              : 'Get in touch with our team — we are here to help you find the perfect accommodation.',
+    'form_title'            : 'Send Us a Message',
+    'form_description'      : 'Fill out the form below and we will get back to you as soon as possible.',
+    'first_name'            : 'First Name',
+    'last_name'             : 'Last Name',
+    'email'                 : 'Email',
+    'phone'                 : 'Phone Number (Optional)',
+    'message'               : 'Message',
+    'first_name_placeholder': 'Enter your first name',
+    'last_name_placeholder' : 'Enter your last name',
+    'email_placeholder'     : 'Enter your email address',
+    'phone_placeholder'     : 'Enter your phone number (optional)',
+    'message_placeholder'   : 'Tell us about your accommodation needs or send your questions or feedback...',
+    'send_button'           : 'Send Message',
+    'info_title'            : 'Contact Information',
+    'info_description'      : 'Reach out to us through any of the following channels.',
+    'email_label'           : 'Email',
+    'phone_label'           : 'Phone',
+    'office_label'          : 'Office',
+    'office_address'        : 'Levent District\nBuyukdere Street No: 123\nSisli, Istanbul, Turkey',
+    'office_hours'          : 'Office Hours',
+    'weekdays'              : 'Monday to Friday',
+    'weekdays_hours'        : '9:00 AM – 6:00 PM',
+    'saturday'              : 'Saturday',
+    'saturday_hours'        : '10:00 AM – 4:00 PM',
+    'sunday'                : 'Sunday',
+    'sunday_hours'          : 'Closed'
+  },
     // ///////////////////// contact page /////////////////////////
-'cart': {
-  'breadcrumb_home'   : 'Home',
-  'breadcrumb_cart'   : 'Cart',
-  'empty_title'       : 'Your cart is empty',
-  'empty_description' : 'Browse our accommodations and add some rooms to your cart.',
-  'browse_button'     : 'Browse Accommodations',
-},
-  "whatsapp": {
-    "message": "Hello 👋\nI would like to book the following room:\n\n🏠 Room: {room}\n🏢 Accommodation: {accommodation}\n📍 Location: {location}\n💰 Price: {price} {currency} / {payment_per}\n💵 Deposit: {deposit} {currency}\n📅 Available From: {available_from}\n📐 Size: {size} m²\n\nPlease provide more details. Thank you!"
+  'cart': {
+    'breadcrumb_home'  : 'Home',
+    'breadcrumb_cart'  : 'Cart',
+    'empty_title'      : 'Your cart is empty',
+    'empty_description': 'Browse our accommodations and add some rooms to your cart.',
+    'browse_button'    : 'Browse Accommodations'
+  },
+  'whatsapp': {
+    'message': 'Hello 👋\nI would like to book the following room:\n\n🏠 Room: {room}\n🏢 Accommodation: {accommodation}\n📍 Location: {location}\n💰 Price: {price} {currency} / {payment_per}\n💵 Deposit: {deposit} {currency}\n📅 Available From: {available_from}\n📐 Size: {size} m²\n\nPlease provide more details. Thank you!'
+  },
+  'auth': {
+    'welcome' : 'Welcome',
+    'subtitle': 'Sign in to your account or create a new one',
+
+    'sign_in': 'Sign In',
+    'sign_up': 'Sign Up',
+
+    'sign_in_with': 'Sign in with',
+    'email'       : 'Email',
+    'phone'       : 'Phone',
+
+    'email_address'    : 'Email Address',
+    'email_placeholder': 'Enter your email address',
+
+    'password'            : 'Password',
+    'password_placeholder': 'Enter your password',
+
+    'forgot_password': 'Forgot password?',
+
+    'or_continue'        : 'Or continue with',
+    'sign_in_with_google': 'Sign in with Google',
+
+    'phone_number'     : 'Phone Number',
+    'phone_placeholder': 'Enter your phone number',
+
+    'pin'            : 'Verification Code (PIN)',
+    'pin_placeholder': 'Enter the code sent to you',
+
+    'full_name'            : 'Full Name',
+    'full_name_placeholder': 'Enter your full name'
   }
 
 }
