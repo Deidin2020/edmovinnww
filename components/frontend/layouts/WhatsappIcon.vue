@@ -1,6 +1,6 @@
 <template>
   <div class="whatsapp-icon">
-    <a href="https://wa.me/+905550448000" target="_blank" rel="noopener">
+    <a href="https://wa.me/+905550772000" target="_blank" rel="noopener">
       <img src="/img/whatsapp.webp" alt="WhatsApp" title="WhatsApp" />
     </a>
   </div>

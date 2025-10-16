@@ -3,8 +3,8 @@ export default {
         port: process.env.SERVER_PORT || 8000
     },
 
-    ssr: false,
-    target: 'static',
+    ssr: true,
+    target: 'server',
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'edmovinn',

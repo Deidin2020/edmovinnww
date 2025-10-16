@@ -18,7 +18,7 @@
     "eslint.format.enable": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "chenxsan.vscode-standard-format",
         "editor.formatOnSave": false
     },
     "[typescript]": {

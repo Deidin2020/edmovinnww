@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../edmovcrmv2"
+		}
+	],
+	"settings": {
+		"prettier.printWidth": 1000,
+		"prettier.bracketSpacing": false,
+		"prettier.tabWidth": 4
+	}
+}

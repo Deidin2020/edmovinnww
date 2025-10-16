@@ -52,7 +52,7 @@
           </div>
 
 
-          <div dir="ltr" data-orientation="horizontal" class="mb-4 sm:mb-6">
+          <div data-orientation="horizontal" class="mb-4 sm:mb-6">
 
 
             <div

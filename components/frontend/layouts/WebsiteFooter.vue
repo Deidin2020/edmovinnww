@@ -11,7 +11,7 @@
 
                 <!-- Quick Links -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.quickLinks.title') }}</h4>
+                    <h4 class="font-semibold text-white">{{ $t('footer.quickLinksTitle') }}</h4>
                     <div class="space-y-2">
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/')">{{
@@ -30,7 +30,7 @@
 
                 <!-- Contact Info -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.contactInfo.title') }}</h4>
+                    <h4 class="font-semibold text-white">{{ $t('footer.contactInfoTitle') }}</h4>
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-sm text-white/80">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -39,7 +39,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                             </svg>
-                            <span>{{ $t('footer.contactInfo.email') }}</span>
+                            <span>{{ $t('footer.contact.email') }}</span>
                         </div>
 
                         <div class="flex items-center gap-2 text-sm text-white/80">
@@ -59,7 +59,10 @@
                   A2 2 0 0 1 22 16.92z">
                                 </path>
                             </svg>
-                            <span>{{ $t('footer.contactInfo.phone') }}</span>
+                            <span style="
+    direction: ltr;
+    text-align: left;
+">{{ $t('footer.contact.phone') }}</span>
                         </div>
 
                         <div class="flex items-center gap-2 text-sm text-white/80">
@@ -72,29 +75,33 @@
                                 </path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            <span>{{ $t('footer.contactInfo.address') }}</span>
+                            <span>{{ $t('footer.contact.address') }}</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Languages -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.languages.title') }}</h4>
+                    <h4 class="font-semibold text-white">{{ $t('footer.languagesTitle') }}</h4>
                     <div class="space-y-2">
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
-                            :href="localePath('/')">{{
+                            :href="localePath('/tr')">{{
                                 $t('footer.languages.turkish') }}</a>
-                        <a class="block text-sm text-white/80 hover:text-white transition-colors" href="/ar">{{
-                            $t('footer.languages.arabic') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/ar')">{{
+                                $t('footer.languages.arabic') }}</a>
+                        <a class="block text-sm text-white/80 hover:text-white transition-colors"
+                            :href="localePath('/')">{{
+                                $t('footer.languages.english') }}</a>
                     </div>
                 </div>
             </div>
 
             <!-- Footer Bottom -->
             <div class="border-t border-white/20 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-white/60">{{ $t('footer.bottom.rights') }}</p>
+                <p class="text-sm text-white/60">{{ $t('footer.rights') }}</p>
                 <p class="text-sm text-white/60 flex items-center gap-1">
-                    {{ $t('footer.bottom.madeWith') }}
+                    {{ $t('footer.madeWith') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-heart w-4 h-4 text-red-400">

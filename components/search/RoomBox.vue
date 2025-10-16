@@ -173,32 +173,23 @@ export default {
         sendWhatsAppMessage(room) {
             if (!room.availability) return;
 
-            // رقم الواتساب الذي سيستقبل الرسالة (ضع رقمك هنا بصيغة دولية بدون +)
-            const phoneNumber = "905550448000"; // مثال: رقم في تركيا
+            const phoneNumber = "905550772000"; // رقم الواتساب بدون +
 
-            // بناء نص الرسالة
-            const message = `
-Hello 👋
-I would like to book the following room:
+            const message = this.$t('whatsapp.message', {
+                room: room.name,
+                accommodation: room.accommodation?.name || 'N/A',
+                location: room.accommodation?.state || 'N/A',
+                price: room.price?.price,
+                currency: room.price?.currency,
+                payment_per: room.price?.payment_per,
+                deposit: room.price?.deposit,
+                available_from: room.available_from,
+                size: room.size
+            });
 
-🏠 Room: ${room.name}
-🏢 Accommodation: ${room.accommodation?.name || 'N/A'}
-📍 Location: ${room.accommodation?.state || 'N/A'}
-💰 Price: ${room.price?.price} ${room.price?.currency} / ${room.price?.payment_per}
-💵 Deposit: ${room.price?.deposit} ${room.price?.currency}
-📅 Available From: ${room.available_from}
-📐 Size: ${room.size} m²
-
-Please provide more details. Thank you!
-    `;
-
-            // تحويل النص إلى رابط واتساب مشفر
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-            // فتح الرابط في نافذة جديدة
             window.open(whatsappURL, "_blank");
         }
-
     },
 };
 </script>

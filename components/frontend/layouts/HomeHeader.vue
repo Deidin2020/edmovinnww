@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Buttons -->
-                    <a class="relative" href="/cart">
+                    <a class="relative" :href="localePath('/cart')">
                         <button
                             class="inline-flex items-center justify-center gap-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -88,17 +88,17 @@
                         </button>
                     </a>
 
-                    <a href="/auth">
-                        <button
-                            class="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
-                            Sign In
+                    <a :href="localePath('/auth')">
+                        <button class=" inline-flex items-center justify-center gap-2 text-sm font-medium border
+                        border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
+                            {{ $t('header.sign_in') }}
                         </button>
                     </a>
 
-                    <a href="/auth">
-                        <button
-                            class="inline-flex items-center justify-center gap-2 text-sm font-medium h-9 rounded-md px-3 bg-primary text-primary-foreground hover:bg-primary/90">
-                            Sign Up
+                    <a :href="localePath('/auth')">
+                        <button class=" inline-flex items-center justify-center gap-2 text-sm font-medium h-9 rounded-md
+                        px-3 bg-primary text-primary-foreground hover:bg-primary/90">
+                            {{ $t('header.sign_up') }}
                         </button>
                     </a>
                 </div>

@@ -1,38 +1,39 @@
 export default {
   header: {
-    home         : "Home",
-    about_us     : "About Us",
-    about     : "About Us",
-    contact_us   : "Contact Us",
-    contact   : "Contact Us",
-    discover_room: "Discover Room",
-    language     : "Language",
-    arabic       : "Arabic",
-    turkish      : "Turkish",
-    english      : "English",
-    log_out      : "Log Out",
-    my_account   : "My Account",
-    sign_in      : "Sign In",
-    sign_up_new  : "Sign Up New"
+    home         : 'Home',
+    about_us     : 'About Us',
+    about        : 'About Us',
+    contact_us   : 'Contact Us',
+    contact      : 'Contact Us',
+    discover_room: 'Discover Room',
+    language     : 'Language',
+    arabic       : 'Arabic',
+    turkish      : 'Turkish',
+    english      : 'English',
+    log_out      : 'Log Out',
+    my_account   : 'My Account',
+    sign_in      : 'Sign In',
+    sign_up_new  : 'Sign Up New',
+    sign_up      : 'Sign Up'
   },
-   footer: {
-    description   : "Your trusted partner for premium student accommodation in Turkey.",
-    quick_links   : "Quick Links",
-    home          : "Home",
-    discover_rooms: "Discover Rooms",
-    about         : "About",
-    contact       : "Contact",
-    contact_info  : "Contact Info",
-    email         : "info@movinn.com",
-    phone         : "+90 XXX XXX XXXX",
-    address       : "Istanbul, Turkey",
-    languages     : "Languages",
-    turkish       : "🇹🇷 Türkçe",
-    english       : " English",
-    arabic        : "🇸🇦 العربية",
-    copyright     : "© 2024 MovInn. All rights reserved.",
+  footer: {
+    description   : 'Your trusted partner for premium student accommodation in Turkey.',
+    quick_links   : 'Quick Links',
+    home          : 'Home',
+    discover_rooms: 'Discover Rooms',
+    about         : 'About',
+    contact       : 'Contact',
+    contact_info  : 'Contact Info',
+    email         : 'info@movinn.com',
+    phone         : '+905550772000',
+    address       : 'Istanbul, Turkey',
+    languages     : 'Languages',
+    turkish       : '🇹🇷 Türkçe',
+    english       : ' English',
+    arabic        : '🇸🇦 العربية',
+    copyright     : '© 2025 MovInn. All rights reserved.'
   },
-   filter: {
+  filter: {
     title   : 'Filters',
     hide    : 'Hide Filters',
     show    : 'Show Filters',
@@ -40,19 +41,19 @@ export default {
       title      : 'Location',
       placeholder: 'Select Locations'
     },
-  city: {
+    city: {
       title      : 'City',
       placeholder: 'Select City'
     },
-     gender: {
+    gender: {
       title      : 'Gender',
       placeholder: 'Select Gender'
     },
-      room: {
+    room: {
       title      : 'Room Type',
       placeholder: 'Select Room Type'
     },
-      reservation: {
+    reservation: {
       title      : 'Reservation Type',
       placeholder: 'Select Reservation Type'
     },
@@ -84,7 +85,7 @@ export default {
     max_fees : 'Max Fees',
     clear_all: 'Clear All'
   },
-  accommodation          : {
+  accommodation: {
     title           : 'Accommodations',
     room_summary    : 'Room summary',
     room_about      : 'About the room',
@@ -103,9 +104,9 @@ export default {
     size            : 'size',
     availability    : 'availability',
     available_from  : 'available from',
-    location        : 'location',
-},
- labels: {
+    location        : 'location'
+  },
+  labels: {
     programs           : 'Programs',
     universities       : 'Universities',
     about              : 'About',
@@ -117,11 +118,11 @@ export default {
     rooms              : 'Rooms',
     Results            : 'Results ',
     Room               : 'Room',
-    Accommodation:'Accommodation',
-    accommodations     : 'Accommodations',      
-    no_results_try_agin: 'No results found for your search. Please try again with different filters.',
+    Accommodation      : 'Accommodation',
+    accommodations     : 'Accommodations',
+    no_results_try_agin: 'No results found for your search. Please try again with different filters.'
   },
-    actions: {
+  actions: {
     sign_up               : 'Sign Up',
     verify                : 'Verify',
     upload_passport       : 'Upload Passport',
@@ -158,60 +159,102 @@ export default {
     registration_closed   : 'registration closed',
     admission_file        : 'admission file'
   },
- "hero": {
-  "titleLine1": "Ideal Student Accommodation",
-  "titleLine2": "Starts Here",
-  "subtitle": "Safe, comfortable, and modern accommodation solutions for your university life",
-  "exploreButton": "Explore Accommodations",
-  "aboutButton": "About Us"
-},
-"stats": {
-  "students": "Happy Students",
-  "accommodations": "Accommodation Options",
-  "universities": "Partner Universities",
-  "support": "Support Services"
-},
-"whyChooseUs": {
-  "title": "Why Choose Us?",
-  "subtitle": "Modern facilities and professional services to make your student life easier",
-  "easySearch": { "title": "Easy Search", "desc": "Find the most suitable student accommodation easily with our advanced filtering system." },
-  "idealLocation": { "title": "Ideal Location", "desc": "Accommodation options located close to universities and with great transportation access." },
-  "safeEnvironment": { "title": "Safe Environment", "desc": "24/7 security, card access system, and safe living spaces." },
-  "qualityService": { "title": "Quality Service", "desc": "Modern facilities, cleaning services, and comfortable living areas." },
-  "socialLife": { "title": "Social Life", "desc": "Common areas, events, and social activities for an active campus life." },
-  "support247": { "title": "24/7 Support", "desc": "Professional support and assistance always available for you." }
-},
-"cta": {
-  "title": "Ready to Start Your University Life?",
-  "subtitle": "Find the best accommodation for you and make a secure reservation",
-  "startNow": "Start Now",
-  "moreInfo": "More Information"
-},
- "footer": {
-    "description": "Your trusted partner for premium student accommodation in Turkey.",
-    "quickLinksTitle": "Quick Links",
-    "quickLinks": {
-      "home": "Home",
-      "discover": "Discover Rooms",
-      "about": "About",
-      "contact": "Contact"
+  'hero': {
+    'titleLine1'   : 'Ideal Student Accommodation',
+    'titleLine2'   : 'Starts Here',
+    'subtitle'     : 'Safe, comfortable, and modern accommodation solutions for your university life',
+    'exploreButton': 'Explore Accommodations',
+    'aboutButton'  : 'About Us'
+  },
+  'stats': {
+    'students'      : 'Happy Students',
+    'accommodations': 'Accommodation Options',
+    'universities'  : 'Partner Universities',
+    'support'       : 'Support Services'
+  },
+  'whyChooseUs': {
+    'title'          : 'Why Choose Us?',
+    'subtitle'       : 'Modern facilities and professional services to make your student life easier',
+    'easySearch'     : { 'title': 'Easy Search', 'desc': 'Find the most suitable student accommodation easily with our advanced filtering system.' },
+    'idealLocation'  : { 'title': 'Ideal Location', 'desc': 'Accommodation options located close to universities and with great transportation access.' },
+    'safeEnvironment': { 'title': 'Safe Environment', 'desc': '24/7 security, card access system, and safe living spaces.' },
+    'qualityService' : { 'title': 'Quality Service', 'desc': 'Modern facilities, cleaning services, and comfortable living areas.' },
+    'socialLife'     : { 'title': 'Social Life', 'desc': 'Common areas, events, and social activities for an active campus life.' },
+    'support247'     : { 'title': '24/7 Support', 'desc': 'Professional support and assistance always available for you.' }
+  },
+  'cta': {
+    'title'   : 'Ready to Start Your University Life?',
+    'subtitle': 'Find the best accommodation for you and make a secure reservation',
+    'startNow': 'Start Now',
+    'moreInfo': 'More Information'
+  },
+  'footer': {
+    'description'    : 'Your trusted partner for premium student accommodation in Turkey.',
+    'quickLinksTitle': 'Quick Links',
+    'quickLinks'     : {
+      'home'    : 'Home',
+      'discover': 'Discover Rooms',
+      'about'   : 'About',
+      'contact' : 'Contact'
     },
-    "contactInfoTitle": "Contact Info",
-    "contact": {
-      "email": "operations@edmovinn.com",
-      "phone": "+90 XXX XXX XXXX",
-      "address": "Istanbul, Turkey"
+    'contactInfoTitle': 'Contact Info',
+    'contact'         : {
+      'email'  : 'operations@edmovinn.com',
+      'phone'  : '+905550772000',
+      'address': 'Istanbul, Turkey'
     },
-    "languagesTitle": "Languages",
-    "languages": {
-      "turkish": "🇹🇷 Turkish",
-      "arabic": "🇸🇦 Arabic"
+    'languagesTitle': 'Languages',
+    'languages'     : {
+      'turkish': '🇹🇷 Turkish',
+      'arabic' : '🇸🇦 Arabic',
+      'english': '🇬🇧 English'
     },
-    "rights": "© 2024 MovInn. All rights reserved.",
-    "madeWith": "Made with ❤️ in Turkey"
+    'rights'  : '2025 MovInn.',
+    'madeWith': '© All rights reserved'
   },
 
-  /////////////////////// about page /////////////////////////
-  
+    // ///////////////////// contact page /////////////////////////
+
+ 'contact': {
+  'title'                 : 'اتصل بنا',
+  'subtitle'              : 'تواصل مع فريقنا، نحن هنا لمساعدتك في العثور على مكان الإقامة المثالي.',
+  'form_title'            : 'أرسل لنا رسالة',
+  'form_description'      : 'املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.',
+  'first_name'            : 'الاسم الأول',
+  'last_name'             : 'اسم العائلة',
+  'email'                 : 'البريد الإلكتروني',
+  'phone'                 : 'رقم الهاتف (اختياري)',
+  'message'               : 'الرسالة',
+  'first_name_placeholder': 'أدخل اسمك الأول',
+  'last_name_placeholder' : 'أدخل اسم عائلتك',
+  'email_placeholder'     : 'أدخل عنوان بريدك الإلكتروني',
+  'phone_placeholder'     : 'أدخل رقم هاتفك (اختياري)',
+  'message_placeholder'   : 'أخبرنا عن احتياجاتك في الإقامة أو أرسل أسئلتك أو ملاحظاتك...',
+  'send_button'           : 'إرسال الرسالة',
+  'info_title'            : 'معلومات التواصل',
+  'info_description'      : 'تواصل معنا عبر أي من القنوات التالية.',
+  'email_label'           : 'البريد الإلكتروني',
+  'phone_label'           : 'الهاتف',
+  'office_label'          : 'المكتب',
+  'office_address'        : 'حي ليفنت\nشارع بويوك دره رقم 123\nشيشلي، إسطنبول، تركيا',
+  'office_hours'          : 'ساعات العمل',
+  'weekdays'              : 'من الإثنين إلى الجمعة',
+  'weekdays_hours'        : 'من 9:00 صباحًا حتى 6:00 مساءً',
+  'saturday'              : 'السبت',
+  'saturday_hours'        : 'من 10:00 صباحًا حتى 4:00 مساءً',
+  'sunday'                : 'الأحد',
+  'sunday_hours'          : 'مغلق'
+},
+    // ///////////////////// contact page /////////////////////////
+'cart': {
+  'breadcrumb_home'   : 'Home',
+  'breadcrumb_cart'   : 'Cart',
+  'empty_title'       : 'Your cart is empty',
+  'empty_description' : 'Browse our accommodations and add some rooms to your cart.',
+  'browse_button'     : 'Browse Accommodations',
+},
+  "whatsapp": {
+    "message": "Hello 👋\nI would like to book the following room:\n\n🏠 Room: {room}\n🏢 Accommodation: {accommodation}\n📍 Location: {location}\n💰 Price: {price} {currency} / {payment_per}\n💵 Deposit: {deposit} {currency}\n📅 Available From: {available_from}\n📐 Size: {size} m²\n\nPlease provide more details. Thank you!"
+  }
 
 }
