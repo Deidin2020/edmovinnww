@@ -29,7 +29,7 @@
       </section>
 
       <!-- Stats Section -->
-      <section class="py-16 bg-muted">
+      <!-- <section class="py-16 bg-muted">
         <div class="max-w-6xl mx-auto px-4">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Why Choose Us -->
       <section class="py-20">

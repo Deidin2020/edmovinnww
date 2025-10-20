@@ -2,10 +2,8 @@ export default {
   header: {
     home         : 'Ana Sayfa',
     about_us     : 'Hakkımızda',
-    about        : 'Hakkımızda',
     contact_us   : 'İletişim',
-    contact      : 'İletişim',
-    discover_room: 'Odaları Keşfet',
+    discover_room: 'Yurtları Keşfet',
     language     : 'Dil',
     arabic       : 'Arapça',
     turkish      : 'Türkçe',
@@ -13,26 +11,118 @@ export default {
     log_out      : 'Çıkış Yap',
     my_account   : 'Hesabım',
     sign_in      : 'Giriş Yap',
-    sign_up_new  : 'Yeni Kayıt Ol',
     sign_up      : 'Kayıt Ol'
   },
-  footer: {
-    description   : 'Türkiye’de premium öğrenci konaklaması için güvenilir ortağınız.',
-    quick_links   : 'Hızlı Bağlantılar',
-    home          : 'Ana Sayfa',
-    discover_rooms: 'Odaları Keşfet',
-    about         : 'Hakkımızda',
-    contact       : 'İletişim',
-    contact_info  : 'İletişim Bilgileri',
-    email         : 'info@movinn.com',
-    phone         : '+905550772000',
-    address       : 'İstanbul, Türkiye',
-    languages     : 'Diller',
-    turkish       : '🇹🇷 Türkçe',
-    english       : '🇬🇧 İngilizce',
-    arabic        : '🇸🇦 Arapça',
-    copyright     : '© 2025 MovInn. Tüm hakları saklıdır.'
+  'hero': {
+    'titleLine1'   : 'Edmov Inn',
+    'titleLine2'   : 'Öğrenciler için akıllı seçimler, konforlu bir yaşam alanı.',
+    'subtitle'     : 'Yapay zekâ desteğiyle sana en uygun öğrenci yurdunu kolayca bul',
+    'exploreButton': 'Yurt Seçeneklerini Keşfet',
+    'aboutButton'  : 'Edmov Inn Hakkında'
   },
+
+  whyChooseUs: {
+    title     : '  Neden Edmov Inn’i Seçmelisin?',
+    subtitle  : 'Edmov Inn, Türkiye’deki öğrencilerin kendilerine en uygun yurdu kolayca bulmalarını sağlamak için tasarlanmış akıllı bir platformdur.Yapay zekâ araçlarıyla desteklenen sistemimiz, sana en uygun öğrenci yurdunu dakikalar içinde bulmana yardımcı olur — güvenli, kolay ve hızlı.',
+    easySearch: {
+      title: 'Akıllı Arama',
+      desc : 'Oda tipi, bütçe, konum ve hizmet gibi kriterleri filtreleyerek sana en uygun seçenekleri anında görüntüle.'
+    },
+    idealLocation: {
+      title: 'Güvenilir Seçenekler',
+      desc : 'Platformdaki tüm yurtlar, Gençlik ve Spor Bakanlığı tarafından onaylı ve lisanslıdır. Böylece güvenli bir şekilde seçim yapabilirsin.'
+    },
+    safeEnvironment: {
+      title: 'Kolay Takip',
+      desc : 'Rezervasyon, ödeme ve teslimat süreçlerini kullanıcı dostu panelden kolayca takip et.Ayrıca yurtta kaldığın süre boyunca hizmetleri de sistem üzerinden yönetebilirsin.'
+    },
+    qualityService: {
+      title: 'Güvenli Ödeme Yöntemleri',
+      desc : 'Rezervasyonunu platform üzerinden güvenli ödeme seçenekleriyle tamamla — Banka havalesi, doğrudan platform üzerinden ödeme veya yerinde ödeme seçeneklerinden dilediğini seç.'
+    },
+    socialLife: {
+      title: '7/24 Destek',
+      desc : 'Ekibimiz, sana günün her saatinde destek sunarak sorunsuz ve konforlu bir öğrenci yaşamı deneyimi sağlar.'
+    },
+    support247: {
+      title: '',
+      desc : ''
+    }
+  },
+
+  cta: {
+    title   : 'Sana en uygun yurdu bulmaya hazır mısın?',
+    subtitle: 'Yapay zekâ desteğiyle senin için en doğru seçeneği hemen keşfet.',
+    startNow: 'Aramaya Başla',
+    moreInfo: 'Daha Fazla Detay'
+  },
+
+  'footer': {
+    'description'    : 'Your trusted partner for premium student accommodation in Turkey.',
+    'quickLinksTitle': ' ',
+    'contact'        : {
+      'email'  : 'operations@edmovinn.com',
+      'phone'  : '+905550772000',
+      'address': 'Mehmet Akif, 4.Can Sk No: 36-38, 34307 Küçükçekmece/İstanbul'
+    },
+    'rights'  : '2025 MovInn.',
+    'madeWith': '© All rights reserved'
+  },
+
+
+
+  contact: {
+    title                 : 'Bize Ulaşın',
+    subtitle              : 'Bizi arayın, e-posta gönderin veya doğrudan talep oluşturun — ekibimiz size destek olmaya hazır.',
+    form_title            : 'Doğrudan bizimle iletişime geçin',
+    form_description      : 'Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapacağız.',
+
+    first_name            : 'Ad',
+    last_name             : 'Soyad',
+    email                 : 'E-posta',
+    phone                 : 'Telefon Numarası ',
+    message               : 'Mesaj',
+    first_name_placeholder: 'Adınızı girin',
+    last_name_placeholder : 'Soyadınızı girin',
+    email_placeholder     : 'E-posta adresinizi girin',
+    phone_placeholder     : 'Telefon numaranızı girin ',
+    message_placeholder   : 'Konaklama ihtiyaçlarınızı, sorularınızı veya yorumlarınızı bize yazın...',
+    send_button           : 'Mesaj Gönder',
+    
+    info_title            : 'İletişim Bilgileri',
+    info_description      : 'Ya da aşağıdaki bilgiler üzerinden bizimle iletişime geçebilirsiniz:',
+
+    email_label           : 'E-posta',
+    phone_label           : 'Telefon',
+    office_label          : 'Ofis',
+
+    office_hours          : 'Çalışma Saatleri',
+    weekdays              : 'Pazartesi - Cuma',
+    weekdays_hours        : '10:00 - 18:00',
+    saturday              : 'Cumartesi',
+    saturday_hours        : 'Kapalı',
+    sunday                : 'Pazar',
+    sunday_hours          : 'Kapalı'
+  },
+  
+  "about": {
+    "title": "Hakkımızda",
+    "intro": "Edmov Inn, Türkiye’deki öğrenci yurtlarının yönetimi ve rezervasyonu için tasarlanmış akıllı bir platformdur. Uygun yurdu bulma sürecini daha kolay, güvenli ve akıllı hale getirmek için geliştirilmiştir. Biz, öğrenci yurdunun yalnızca bir konaklama alanı olmadığını, aynı zamanda bütünsel bir öğrenci deneyiminin başlangıcı olduğunu düşünüyoruz. Bu nedenle, öğrencilerin üniversite konumu, bütçesi ve yaşam tarzına göre en uygun yurdu bulmalarına yardımcı olmak için yapay zekâ destekli bir sistem geliştirdik.",
+    "vision": {
+      "title": "Vizyonumuz",
+      "text": "Türkiye’de akıllı öğrenci yurtları alanında lider platform olmak; teknolojiyi, güveni ve konforu bir araya getiren bütünsel bir rezervasyon deneyimi sunmak. Amacımız, yurt seçimini öğrencinin akademik başarısına katkı sağlayan kolay ve güvenilir bir adım haline getirmektir."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "text": "Üniversite öğrencilerinin yaşamını kolaylaştırmak için tüm yurt seçeneklerini tek bir çatı altında toplayan bir platform sunuyoruz. Akıllı bir kullanıcı arayüzü, titiz doğrulama süreçleri ve güvenli, esnek ödeme seçenekleriyle desteklenmiştir. Amacımız, öğrencinin araştırma anından yurt yerleşimine kadar rahat ve sorunsuz bir deneyim yaşamasını sağlamaktır."
+    },
+    "how": {
+      "title": "Nasıl Çalışıyoruz",
+      "text": "Edmov Inn, öğrencinin verilerini ve tercihlerini analiz eden akıllı bir öneri sistemiyle çalışır ve konum, fiyat ve hizmet açısından en uygun seçenekleri sunar. Her yurt, platforma eklenmeden önce lisans ve onay süreçlerinden geçirilir; bu da en yüksek güvenilirlik ve kalite standartlarını garanti eder. Kullanıcı dostu panelimiz sayesinde öğrenci, rezervasyon, ödeme ve yerleşim adımlarının her birini kolayca takip edebilir."
+    }
+},
+
+  
   filter: {
     title   : 'Filtreler',
     hide    : 'Filtreleri Gizle',
@@ -158,90 +248,14 @@ export default {
     registration_closed   : 'Kayıt Kapalı',
     admission_file        : 'Kabul Dosyası'
   },
-  hero: {
-    titleLine1   : 'Mükemmel Öğrenci Konaklaması',
-    titleLine2   : 'Burada Başlar',
-    subtitle     : 'Üniversite hayatınız için güvenli, konforlu ve modern konaklama çözümleri',
-    exploreButton: 'Konaklamaları Keşfet',
-    aboutButton  : 'Hakkımızda'
-  },
+
   stats: {
     students      : 'Mutlu Öğrenciler',
     accommodations: 'Konaklama Seçenekleri',
     universities  : 'Ortak Üniversiteler',
     support       : 'Destek Hizmetleri'
   },
-  whyChooseUs: {
-    title          : 'Neden Bizi Seçmelisiniz?',
-    subtitle       : 'Modern tesisler ve profesyonel hizmetlerle öğrenci yaşamınızı kolaylaştırın',
-    easySearch     : { title: 'Kolay Arama', desc: 'Gelişmiş filtreleme sistemiyle size en uygun konaklamayı kolayca bulun.' },
-    idealLocation  : { title: 'Mükemmel Konum', desc: 'Üniversitelere yakın ve ulaşımı kolay konaklama seçenekleri.' },
-    safeEnvironment: { title: 'Güvenli Ortam', desc: '7/24 güvenlik, kartlı giriş sistemi ve güvenli yaşam alanları.' },
-    qualityService : { title: 'Kaliteli Hizmet', desc: 'Modern tesisler, temizlik hizmetleri ve konforlu yaşam alanları.' },
-    socialLife     : { title: 'Sosyal Yaşam', desc: 'Ortak alanlar, etkinlikler ve aktif bir kampüs yaşamı için sosyal aktiviteler.' },
-    support247     : { title: '7/24 Destek', desc: 'Her zaman yanınızda profesyonel destek ve yardım.' }
-  },
-  cta: {
-    title   : 'Üniversite Hayatına Başlamaya Hazır mısın?',
-    subtitle: 'Sizin için en iyi konaklamayı bulun ve güvenli bir rezervasyon yapın',
-    startNow: 'Şimdi Başla',
-    moreInfo: 'Daha Fazla Bilgi'
-  },
-  footer: {
-    description    : 'Türkiye’de premium öğrenci konaklaması için güvenilir ortağınız.',
-    quickLinksTitle: 'Hızlı Bağlantılar',
-    quickLinks     : {
-      home    : 'Ana Sayfa',
-      discover: 'Odaları Keşfet',
-      about   : 'Hakkımızda',
-      contact : 'İletişim'
-    },
-    contactInfoTitle: 'İletişim Bilgileri',
-    contact         : {
-      email  : 'operations@edmovinn.com',
-      phone  : '+905550772000',
-      address: 'İstanbul, Türkiye'
-    },
-    languagesTitle: 'Diller',
-    languages     : {
-      turkish: '🇹🇷 Türkçe',
-      arabic : '🇸🇦 Arapça',
-      english: '🇬🇧 İngilizce'
-    },
-    rights  : '2025 MovInn.',
-    madeWith: '© Tüm hakları saklıdır'
-  },
 
-  contact: {
-    title                 : 'İletişim',
-    subtitle              : 'Ekibimizle iletişime geçin, size en uygun konaklamayı bulmanız için buradayız.',
-    form_title            : 'Bize Mesaj Gönderin',
-    form_description      : 'Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapacağız.',
-    first_name            : 'Ad',
-    last_name             : 'Soyad',
-    email                 : 'E-posta',
-    phone                 : 'Telefon Numarası (İsteğe bağlı)',
-    message               : 'Mesaj',
-    first_name_placeholder: 'Adınızı girin',
-    last_name_placeholder : 'Soyadınızı girin',
-    email_placeholder     : 'E-posta adresinizi girin',
-    phone_placeholder     : 'Telefon numaranızı girin (isteğe bağlı)',
-    message_placeholder   : 'Konaklama ihtiyaçlarınızı, sorularınızı veya yorumlarınızı bize yazın...',
-    send_button           : 'Mesaj Gönder',
-    info_title            : 'İletişim Bilgileri',
-    info_description      : 'Aşağıdaki kanallardan bizimle iletişime geçebilirsiniz.',
-    email_label           : 'E-posta',
-    phone_label           : 'Telefon',
-    office_label          : 'Ofis',
-    office_address        : 'Levent Mahallesi\nBüyükdere Caddesi No: 123\nŞişli, İstanbul, Türkiye',
-    office_hours          : 'Çalışma Saatleri',
-    weekdays              : 'Pazartesi - Cuma',
-    weekdays_hours        : '09:00 - 18:00',
-    saturday              : 'Cumartesi',
-    saturday_hours        : '10:00 - 16:00',
-    sunday                : 'Pazar',
-    sunday_hours          : 'Kapalı'
-  },
   cart: {
     breadcrumb_home  : 'Ana Sayfa',
     breadcrumb_cart  : 'Sepet',

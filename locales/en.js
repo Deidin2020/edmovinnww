@@ -1,10 +1,8 @@
 export default {
   header: {
     home         : 'Home',
-    about_us     : 'About Us',
-    about        : 'About Us',
-    contact_us   : 'Contact Us',
-    contact      : 'Contact Us',
+    about_us     : 'About',
+    contact_us   : 'Contact',
     discover_room: 'Discover Room',
     language     : 'Language',
     arabic       : 'Arabic',
@@ -13,26 +11,117 @@ export default {
     log_out      : 'Log Out',
     my_account   : 'My Account',
     sign_in      : 'Sign In',
-    sign_up_new  : 'Sign Up New',
     sign_up      : 'Sign Up'
   },
-  footer: {
-    description   : 'Your trusted partner for premium student accommodation in Turkey.',
-    quick_links   : 'Quick Links',
-    home          : 'Home',
-    discover_rooms: 'Discover Rooms',
-    about         : 'About',
-    contact       : 'Contact',
-    contact_info  : 'Contact Info',
-    email         : 'info@movinn.com',
-    phone         : '+905550772000',
-    address       : 'Istanbul, Turkey',
-    languages     : 'Languages',
-    turkish       : '🇹🇷 Türkçe',
-    english       : ' English',
-    arabic        : '🇸🇦 العربية',
-    copyright     : '© 2025 MovInn. All rights reserved.'
+
+  hero: {
+    titleLine1   : 'edmovinn',
+    titleLine2   : 'Smart choices for, comfortable Dorms.',
+    subtitle     : 'Find the most suitable student residence for you easily with the support of artificial intelligence.',
+    exploreButton: 'Explore Dorm Options',
+    aboutButton  : 'About Edmov Inn'
   },
+
+  whyChooseUs: {
+    title     : '  Why Choose Edmov Inn?',
+    subtitle  : 'Edmov Inn is an intelligent platform designed to help students in Türkiye easily find the student residence that best fits their needs.Powered by advanced AI tools, our system helps you find your ideal student housing within minutes — safely, easily, and efficiently.',
+    easySearch: {
+      title: 'Smart Search',
+      desc : 'Use personalized filters to instantly explore options based on room type, budget, location, and available services.'
+    },
+    idealLocation: {
+      title: 'Verified Options',
+      desc : 'All dorms listed on the platform are approved and licensed by the Ministry of Youth and Sports, ensuring a reliable and safe experience.'
+    },
+    safeEnvironment: {
+      title: 'Easy Tracking',
+      desc : 'Follow every step of your booking, payment, and check-in process through a simple, user-friendly dashboard.You can also manage housing services during your stay directly through the system.'
+    },
+    qualityService: {
+      title: 'Secure Payment Methods',
+      desc : 'Complete your booking through the platform with safe and flexible payment options —Bank transfer, direct payment via the platform, or on-site payment.'
+    },
+    socialLife: {
+      title: '24/7 Support',
+      desc : 'Our dedicated team is available at all times to provide full assistance and ensure a smooth, comfortable student living experience.'
+    },
+    support247: {
+      title: '',
+      desc : ''
+    }
+  },
+
+  cta: {
+    title   : 'Ready to find your ideal student residence?',
+    subtitle: 'Discover the best match for you with the help of AI.',
+    startNow: 'Start Searching',
+    moreInfo: 'Learn More'
+  },
+
+  'footer': {
+    'description'    : 'Your trusted partner for premium student accommodation in Turkey.',
+    'quickLinksTitle': ' ',
+    'contact'         : {
+      'email'  : 'operations@edmovinn.com',
+      'phone'  : '+905550772000',
+      'address': 'Mehmet Akif, 4.Can Sk No: 36-38, 34307 Küçükçekmece/İstanbul'
+    },
+    'rights'  : '2025 MovInn.',
+    'madeWith': '© All rights reserved'
+  },
+
+  
+    // ///////////////////// contact page /////////////////////////
+
+  'contact': {
+    'title'                 : 'Contact us directly',
+    'subtitle'              : 'Call us, email us, or send us a direct request — our team is ready to assist you.',
+    'form_title'            : 'Send Us a Message',
+    'form_description'      : 'Fill out the form below and we will get back to you as soon as possible.',
+    'first_name'            : 'First Name',
+    'last_name'             : 'Last Name',
+    'email'                 : 'Email',
+    'phone'                 : 'Phone Number ',
+    'message'               : 'Request',
+    'first_name_placeholder': 'Enter your first name',
+    'last_name_placeholder' : 'Enter your last name',
+    'email_placeholder'     : 'Enter your email address',
+    'phone_placeholder'     : 'Enter your phone number ',
+    'message_placeholder'   : 'Tell us about your accommodation needs or send your questions or feedback...',
+    'send_button'           : 'Send Message',
+    'info_title'            : 'Contact Information',
+    'info_description'      : 'Or you can reach us through the following:',
+    'email_label'           : 'Email',
+    'phone_label'           : 'Phone',
+    'office_label'          : 'Office',
+
+    'office_hours'          : 'Working Hours',
+    'weekdays'              : 'Monday to Friday',
+    'weekdays_hours'        : 'From 10:00 AM to 6:00 PM',
+    'saturday'              : 'Saturday',
+    'saturday_hours'        : 'Closed',
+    'sunday'                : 'Sunday',
+    'sunday_hours'          : 'Closed'
+  },
+
+ "about": {
+    "title": "About Us",
+    "intro": "Edmov Inn is an intelligent platform for managing and booking student residences in Türkiye. It is designed to make the process of finding suitable accommodation easier, safer, and smarter. We believe that a student residence is not just a place to stay but the beginning of a complete student experience. That’s why we developed an AI-powered system to help students find the ideal housing option based on university location, budget, and lifestyle.",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the leading platform for smart student housing in Türkiye by offering a complete booking experience that combines technology, trust, and comfort. Our goal is to make choosing a residence an easy and reliable step that contributes to students’ stability and academic success."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To simplify university students’ lives through a platform that brings together all housing options in one place — supported by a smart user interface, precise verification processes, and secure, flexible payment methods. Our mission is to provide a smooth and comfortable experience for every student, from searching to moving in."
+    },
+    "how": {
+      "title": "How We Work",
+      "text": "Edmov Inn operates with an intelligent recommendation system that analyzes student data and preferences to suggest the best housing options in terms of location, price, and services. Each residence is verified and licensed before being listed on the platform to ensure the highest standards of reliability and quality. Through a simple dashboard, students can track every step of their booking, payment, and move-in process with ease."
+    },
+
+    },
+    /////////////////////// filter section /////////////////////////
   filter: {
     title   : 'Filters',
     hide    : 'Hide Filters',
@@ -159,92 +248,14 @@ export default {
     registration_closed   : 'registration closed',
     admission_file        : 'admission file'
   },
-  'hero': {
-    'titleLine1'   : 'Ideal Student Accommodation',
-    'titleLine2'   : 'Starts Here',
-    'subtitle'     : 'Safe, comfortable, and modern accommodation solutions for your university life',
-    'exploreButton': 'Explore Accommodations',
-    'aboutButton'  : 'About Us'
-  },
+
   'stats': {
     'students'      : 'Happy Students',
     'accommodations': 'Accommodation Options',
     'universities'  : 'Partner Universities',
     'support'       : 'Support Services'
   },
-  'whyChooseUs': {
-    'title'          : 'Why Choose Us?',
-    'subtitle'       : 'Modern facilities and professional services to make your student life easier',
-    'easySearch'     : { 'title': 'Easy Search', 'desc': 'Find the most suitable student accommodation easily with our advanced filtering system.' },
-    'idealLocation'  : { 'title': 'Ideal Location', 'desc': 'Accommodation options located close to universities and with great transportation access.' },
-    'safeEnvironment': { 'title': 'Safe Environment', 'desc': '24/7 security, card access system, and safe living spaces.' },
-    'qualityService' : { 'title': 'Quality Service', 'desc': 'Modern facilities, cleaning services, and comfortable living areas.' },
-    'socialLife'     : { 'title': 'Social Life', 'desc': 'Common areas, events, and social activities for an active campus life.' },
-    'support247'     : { 'title': '24/7 Support', 'desc': 'Professional support and assistance always available for you.' }
-  },
-  'cta': {
-    'title'   : 'Ready to Start Your University Life?',
-    'subtitle': 'Find the best accommodation for you and make a secure reservation',
-    'startNow': 'Start Now',
-    'moreInfo': 'More Information'
-  },
-  'footer': {
-    'description'    : 'Your trusted partner for premium student accommodation in Turkey.',
-    'quickLinksTitle': 'Quick Links',
-    'quickLinks'     : {
-      'home'    : 'Home',
-      'discover': 'Discover Rooms',
-      'about'   : 'About',
-      'contact' : 'Contact'
-    },
-    'contactInfoTitle': 'Contact Info',
-    'contact'         : {
-      'email'  : 'operations@edmovinn.com',
-      'phone'  : '+905550772000',
-      'address': 'Istanbul, Turkey'
-    },
-    'languagesTitle': 'Languages',
-    'languages'     : {
-      'turkish': '🇹🇷 Turkish',
-      'arabic' : '🇸🇦 Arabic',
-      'english': '🇬🇧 English'
-    },
-    'rights'  : '2025 MovInn.',
-    'madeWith': '© All rights reserved'
-  },
 
-    // ///////////////////// contact page /////////////////////////
-
-  'contact': {
-    'title'                 : 'Contact Us',
-    'subtitle'              : 'Get in touch with our team — we are here to help you find the perfect accommodation.',
-    'form_title'            : 'Send Us a Message',
-    'form_description'      : 'Fill out the form below and we will get back to you as soon as possible.',
-    'first_name'            : 'First Name',
-    'last_name'             : 'Last Name',
-    'email'                 : 'Email',
-    'phone'                 : 'Phone Number (Optional)',
-    'message'               : 'Message',
-    'first_name_placeholder': 'Enter your first name',
-    'last_name_placeholder' : 'Enter your last name',
-    'email_placeholder'     : 'Enter your email address',
-    'phone_placeholder'     : 'Enter your phone number (optional)',
-    'message_placeholder'   : 'Tell us about your accommodation needs or send your questions or feedback...',
-    'send_button'           : 'Send Message',
-    'info_title'            : 'Contact Information',
-    'info_description'      : 'Reach out to us through any of the following channels.',
-    'email_label'           : 'Email',
-    'phone_label'           : 'Phone',
-    'office_label'          : 'Office',
-    'office_address'        : 'Levent District\nBuyukdere Street No: 123\nSisli, Istanbul, Turkey',
-    'office_hours'          : 'Office Hours',
-    'weekdays'              : 'Monday to Friday',
-    'weekdays_hours'        : '9:00 AM – 6:00 PM',
-    'saturday'              : 'Saturday',
-    'saturday_hours'        : '10:00 AM – 4:00 PM',
-    'sunday'                : 'Sunday',
-    'sunday_hours'          : 'Closed'
-  },
     // ///////////////////// contact page /////////////////////////
   'cart': {
     'breadcrumb_home'  : 'Home',

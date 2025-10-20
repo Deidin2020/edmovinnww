@@ -15,22 +15,22 @@
                     <div class="space-y-2">
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/')">{{
-                                $t('footer.quickLinks.home') }}</a>
+                                $t('header.home') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/search')">{{
-                                $t('footer.quickLinks.discover') }}</a>
+                                $t('header.discover_room') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/about')">{{
-                                $t('footer.quickLinks.about') }}</a>
+                                $t('header.about_us') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/contact')">{{
-                                $t('footer.quickLinks.contact') }}</a>
+                                $t('header.contact_us') }}</a>
                     </div>
                 </div>
 
                 <!-- Contact Info -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.contactInfoTitle') }}</h4>
+                    <h4 class="font-semibold text-white">{{ $t('header.contact_us') }}</h4>
                     <div class="space-y-2">
                         <div class="flex items-center gap-2 text-sm text-white/80">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -82,17 +82,17 @@
 
                 <!-- Languages -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.languagesTitle') }}</h4>
+                    <h4 class="font-semibold text-white">{{ $t('header.language') }}</h4>
                     <div class="space-y-2">
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/tr')">{{
-                                $t('footer.languages.turkish') }}</a>
+                                $t('header.turkish') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/ar')">{{
-                                $t('footer.languages.arabic') }}</a>
+                                $t('header.arabic') }}</a>
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/')">{{
-                                $t('footer.languages.english') }}</a>
+                                $t('header.english') }}</a>
                     </div>
                 </div>
             </div>

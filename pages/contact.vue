@@ -27,9 +27,9 @@
                   </svg>
                   {{ $t('contact.form_title') }}
                 </h3>
-                <p class="text-sm text-muted-foreground">
+                <!-- <p class="text-sm text-muted-foreground">
                   {{ $t('contact.form_description') }}
-                </p>
+                </p> -->
               </div>
 
               <div class="p-6 pt-0">
@@ -78,11 +78,11 @@
               <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
                 <div class="flex flex-col space-y-1.5 p-6">
                   <h3 class="text-2xl font-semibold leading-none tracking-tight">
-                    {{ $t('contact.info_title') }}
-                  </h3>
-                  <p class="text-sm text-muted-foreground">
                     {{ $t('contact.info_description') }}
-                  </p>
+                  </h3>
+                  <!-- <p class="text-sm text-muted-foreground">
+                    {{ $t('contact.info_description') }}
+                  </p> -->
                 </div>
 
                 <div class="p-6 pt-0 space-y-6">
@@ -136,7 +136,7 @@
                     <div>
                       <h3 class="font-semibold text-foreground">{{ $t('contact.office_label') }}</h3>
                       <p class="text-muted-foreground">
-                        {{ $t('contact.office_address') }}
+                        {{ $t('footer.contact.address') }}
                       </p>
                     </div>
                   </div>

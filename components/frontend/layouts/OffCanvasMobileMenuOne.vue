@@ -73,7 +73,7 @@
                     {{ $t('header.sign_in') }}
                 </a>
                 <a v-else :href="localePath('/signup')" class="btn btn-primary w-100 ">
-                    {{ $t('header.sign_up_new') }}
+                    {{ $t('header.sign_up') }}
                 </a>
             </ul>
         </div>

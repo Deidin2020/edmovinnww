@@ -20,11 +20,11 @@
                     </a>
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
                         :href="localePath('/about')">
-                        {{ $t('header.about') }}
+                        {{ $t('header.about_us') }}
                     </a>
                     <a class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 text-sm font-medium"
                         :href="localePath('/contact')">
-                        {{ $t('header.contact') }}
+                        {{ $t('header.contact_us') }}
                     </a>
                 </nav>
                 <!-- Right Section -->
