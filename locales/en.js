@@ -107,6 +107,7 @@ export default {
  "about": {
     "title": "About Us",
     "intro": "Edmov Inn is an intelligent platform for managing and booking student residences in Türkiye. It is designed to make the process of finding suitable accommodation easier, safer, and smarter. We believe that a student residence is not just a place to stay but the beginning of a complete student experience. That’s why we developed an AI-powered system to help students find the ideal housing option based on university location, budget, and lifestyle.",
+    "gallery": "Gallery",
     "vision": {
       "title": "Our Vision",
       "text": "To be the leading platform for smart student housing in Türkiye by offering a complete booking experience that combines technology, trust, and comfort. Our goal is to make choosing a residence an easy and reliable step that contributes to students’ stability and academic success."

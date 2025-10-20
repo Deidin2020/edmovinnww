@@ -108,6 +108,7 @@ export default {
   "about": {
     "title": "Hakkımızda",
     "intro": "Edmov Inn, Türkiye’deki öğrenci yurtlarının yönetimi ve rezervasyonu için tasarlanmış akıllı bir platformdur. Uygun yurdu bulma sürecini daha kolay, güvenli ve akıllı hale getirmek için geliştirilmiştir. Biz, öğrenci yurdunun yalnızca bir konaklama alanı olmadığını, aynı zamanda bütünsel bir öğrenci deneyiminin başlangıcı olduğunu düşünüyoruz. Bu nedenle, öğrencilerin üniversite konumu, bütçesi ve yaşam tarzına göre en uygun yurdu bulmalarına yardımcı olmak için yapay zekâ destekli bir sistem geliştirdik.",
+    "gallery": "Galeri",
     "vision": {
       "title": "Vizyonumuz",
       "text": "Türkiye’de akıllı öğrenci yurtları alanında lider platform olmak; teknolojiyi, güveni ve konforu bir araya getiren bütünsel bir rezervasyon deneyimi sunmak. Amacımız, yurt seçimini öğrencinin akademik başarısına katkı sağlayan kolay ve güvenilir bir adım haline getirmektir."

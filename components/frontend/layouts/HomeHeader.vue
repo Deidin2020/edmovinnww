@@ -4,7 +4,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <a class="flex-shrink-0" :href="localePath('/')">
-                    <img src="/assets/img/edmovinn-logo-Main.png" style="height: 2.5rem;" alt="Movinn Logo"
+                    <img src="/img/edmovinn-logo-Main.png" style="height: 50px;" alt="Movinn Logo"
                         class="h-10 w-auto object-contain" />
                 </a>
 

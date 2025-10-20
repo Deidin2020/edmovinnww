@@ -4,14 +4,15 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <!-- Logo and Description -->
                 <div class="space-y-3">
-                    <img src="/assets/img/edmovinn-logo-Whiteedmovinn-logo-Whiteedmovinn-logo-White.png"
-                        alt="Movinn Logo" class="h-8 w-auto object-contain brightness-200">
+                    <img src="/img/edmovinn-logo-White.png" alt="Movinn Logo" style="height: 70px;"
+                        class="h-8 w-auto object-contain brightness-200">
                     <p class="text-sm text-white/80">{{ $t('footer.description') }}</p>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="space-y-3">
-                    <h4 class="font-semibold text-white">{{ $t('footer.quickLinksTitle') }}</h4>
+                    <h4 class="font-semibold text-white" style="min-height: 26px;">{{ $t('footer.quickLinksTitle') }}
+                    </h4>
                     <div class="space-y-2">
                         <a class="block text-sm text-white/80 hover:text-white transition-colors"
                             :href="localePath('/')">{{
