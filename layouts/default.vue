@@ -54,7 +54,7 @@ export default {
                         "name": "Edmov",
                         "description": "Welcome to edmov, the innovative EdTech platform revolutionizing the way students find and apply to their dream schools.",
                         "url": "https://www.edmovinn.com",
-                        "logo": "https://edmovinn.com/img/movinn-logo.jpg",
+                        "logo": "https://edmovinn.com/img/edmovinn logo-Main.png",
                         "sameAs": [
                             "https://www.youtube.com/@edmovcom",
                             "https://x.com/i/flow/login?redirect_after_login=%2Fedmovcom",
@@ -104,7 +104,7 @@ export default {
                         "name": "Edmov",
                         "description": "Welcome to edmov, the innovative EdTech platform revolutionizing the way students find and apply to their dream schools.",
                         "url": "https://www.edmovinn.com",
-                        "logo": "https://edmovinn.com/img/movinn-logo.jpg",
+                        "logo": "https://edmovinn.com/img/edmovinn logo-Main.png",
                         "sameAs": [
                             "https://www.youtube.com/@edmovcom",
                             "https://x.com/i/flow/login?redirect_after_login=%2Fedmovcom",

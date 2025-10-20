@@ -4,8 +4,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <!-- Logo and Description -->
                 <div class="space-y-3">
-                    <img src="/assets/movinn-logo-Z5eRNoAw.jpg" alt="Movinn Logo"
-                        class="h-8 w-auto object-contain brightness-200">
+                    <img src="/assets/img/edmovinn-logo-Whiteedmovinn-logo-Whiteedmovinn-logo-White.png"
+                        alt="Movinn Logo" class="h-8 w-auto object-contain brightness-200">
                     <p class="text-sm text-white/80">{{ $t('footer.description') }}</p>
                 </div>
 

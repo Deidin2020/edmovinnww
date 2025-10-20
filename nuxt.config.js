@@ -12,15 +12,15 @@ export default {
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-            { property: 'og:image', content: 'https://edmovinn.com/img/movinn-logo.jpg' }, 
+            { property: 'og:image', content: 'https://edmovinn.com/img/edmovinn logo-Main.png' }, 
             { property: 'og:url', content: 'https://edmovinn.com' },
 
              // Twitter Card Tags
-            { name: 'twitter:card', content: 'https://edmovinn.com/img/movinn-logo.jpg' },
+            { name: 'twitter:card', content: 'https://edmovinn.com/img/edmovinn logo-Main.png' },
             { name: 'twitter:site', content: '@edmovinn' }, 
             { name: 'twitter:title', content: 'edmovinn' },
             { name: 'twitter:description', content: ''},
-            { name: 'twitter:image', content: 'https://edmovinn.com/img/movinn-logo.jpg' },
+            { name: 'twitter:image', content: 'https://edmovinn.com/img/edmovinn logo-Main.png' },
 
             {hid: 'meta_description', name: 'meta_description', content: ''},
             {hid: 'meta_title', name: 'meta_title', content: ''},
