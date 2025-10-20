@@ -15,7 +15,7 @@ export default {
   },
 
   hero: {
-    titleLine1   : 'edmovinn',
+    titleLine1   : 'Edmovinn',
     titleLine2   : 'Smart choices for, comfortable Dorms.',
     subtitle     : 'Find the most suitable student residence for you easily with the support of artificial intelligence.',
     exploreButton: 'Explore Dorm Options',
