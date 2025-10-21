@@ -190,9 +190,9 @@ export default {
       current_page: 1,
     };
   },
-  async mounted() {
+  mounted() {
     this.initializeFilters();
-    await this.fetchData(this.current_page);
+    this.fetchData(this.current_page);
   },
   methods: {
     toggleFilter() {
@@ -207,12 +207,12 @@ export default {
       this.targetTab = 'rooms';
       this.current_page = current_page;
     },
-    async fetchData(page) {
+    fetchData(page) {
       this.loading = true;
-      await this.fetchMainData(page);
+      this.fetchMainData(page);
     },
 
-    async fetchMainData(page = 1, tab = "rooms") {
+    fetchMainData(page = 1, tab = "rooms") {
       const query = {
         ...this.$route.query,
         page,

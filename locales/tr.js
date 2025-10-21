@@ -45,11 +45,10 @@ export default {
       desc : 'Ekibimiz, sana günün her saatinde destek sunarak sorunsuz ve konforlu bir öğrenci yaşamı deneyimi sağlar.'
     },
     support247: {
-      title: '',
-      desc : ''
+      title: 'Yapay Zeka Destekli Öneriler',
+      desc : 'Sistemimiz, üniversite konumu, bütçe ve yaşam tarzı gibi tercihlerini analiz ederek sana en uygun yurtları önerir. Edmov Inn ile ideal konutunu daha hızlı ve akıllıca bul.'
     }
   },
-
   cta: {
     title   : 'Sana en uygun yurdu bulmaya hazır mısın?',
     subtitle: 'Yapay zekâ desteğiyle senin için en doğru seçeneği hemen keşfet.',

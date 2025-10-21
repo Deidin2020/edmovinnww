@@ -46,11 +46,11 @@ export default {
       desc : 'Our dedicated team is available at all times to provide full assistance and ensure a smooth, comfortable student living experience.'
     },
     support247: {
-      title: '',
-      desc : ''
+      title: 'AI-Powered Recommendations',
+      desc : 'Our system uses artificial intelligence to analyze your preferences — such as university location, budget, and lifestyle — to recommend the most suitable dorms for your needs. Find your ideal housing faster and smarter with Edmov Inn.'
     }
   },
-
+ 
   cta: {
     title   : 'Ready to find your ideal student residence?',
     subtitle: 'Discover the best match for you with the help of AI.',
