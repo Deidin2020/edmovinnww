@@ -85,11 +85,13 @@ export default {
     'form_description'      : 'املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.',
     
     'first_name'            : 'الاسم',
+    'full_name'            : 'الاسم',
     'last_name'             : 'الكنية',
     'email'                 : 'البريد الإلكتروني',
     'phone'                 : 'رقم الهاتف ',
     'message'               : 'الرسالة',
     'first_name_placeholder': 'أدخل اسمك الأول',
+    'full_name_placeholder': 'أدخل اسمك ',
     'last_name_placeholder' : 'أدخل الكنية',
     'email_placeholder'     : 'أدخل عنوان بريدك الإلكتروني',
     'phone_placeholder'     : 'أدخل رقم هاتفك',

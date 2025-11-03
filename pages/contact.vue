@@ -33,43 +33,9 @@
               </div>
 
               <div class="p-6 pt-0">
-                <form class="space-y-6">
-                  <div class="grid grid-cols-2 gap-4">
-                    <div class="space-y-2"><label
-                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        for=":r7:-form-item"> {{ $t('contact.first_name') }}</label><input
-                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                        :placeholder="$t('contact.first_name_placeholder')" name="firstName" id=":r7:-form-item"
-                        aria-describedby=":r7:-form-item-description" aria-invalid="false" value=""></div>
-                    <div class="space-y-2"><label
-                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        for=":r8:-form-item"> {{ $t('contact.last_name') }}</label><input
-                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                        :placeholder="$t('contact.last_name_placeholder')" name="lastName" id=":r8:-form-item"
-                        aria-describedby=":r8:-form-item-description" aria-invalid="false" value=""></div>
-                  </div>
-                  <div class="space-y-2"><label
-                      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      for=":r9:-form-item"> {{ $t('contact.email') }}</label><input type="email"
-                      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      :placeholder="$t('contact.email_placeholder')" name="email" id=":r9:-form-item"
-                      aria-describedby=":r9:-form-item-description" aria-invalid="false" value=""></div>
-                  <div class="space-y-2"><label
-                      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      for=":ra:-form-item"> {{ $t('contact.phone') }}</label><input type="tel"
-                      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      :placeholder="$t('contact.phone_placeholder')" name="phone" id=":ra:-form-item"
-                      aria-describedby=":ra:-form-item-description" aria-invalid="false" value=""></div>
-                  <div class="space-y-2"><label
-                      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      for=":rb:-form-item"> {{ $t('contact.message') }}</label><textarea
-                      class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[120px]"
-                      :placeholder="$t('contact.message_placeholder')" name="message" id=":rb:-form-item"
-                      aria-describedby=":rb:-form-item-description" aria-invalid="false"></textarea>
-                  </div><button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
-                    type="submit"> {{ $t('contact.send_button') }}</button>
-                </form>
+                <ContactUsForm @hide="$emit('hide')" />
+
+
               </div>
             </div>
 

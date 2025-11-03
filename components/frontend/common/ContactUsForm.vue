@@ -8,40 +8,51 @@
           </p>
         </div>
 
-        <div class="form-group col-lg-12">
-          <label for="full_name">{{ $t('inputs.full_name') }}</label>
-          <input id="full_name" v-model="form.full_name" :placeholder="$t('inputs.full_name_placeholder')" type="text">
-          <small v-if="errors && 'full_name' in errors" class="text-sm text-danger">{{
-            errors['full_name'][0] }}</small>
+        <div class="space-y-2" style="margin-top:15px">
+          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"> {{
+            $t('contact.full_name') }}</label>
+          <input type="text" v-model="form.full_name"
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            :placeholder="$t('contact.full_name_placeholder')" name="full_name">
+          <small v-if="errors && 'full_name' in errors" class="text-sm text-danger">
+            {{ errors['full_name'][0] }}</small>
         </div>
 
-        <div class="form-group col-lg-12">
+        <!-- <div class="form-group col-lg-12">
           <label for="phone_number">
             {{ $t('inputs.phone') }}
 
           </label>
-            <vue-phone-number-input
-                id="phone_number"
-                v-model="form.phone"
-                :default-country-code="country_code"
-                :translations="translations"
-                :placeholder="`${$t('inputs.enter')} ${$t('inputs.phone')}`" 
-                @update="updatePhoneNumber"
-            />
+          <vue-phone-number-input id="phone_number" v-model="form.phone" :default-country-code="country_code"
+            :translations="translations" :placeholder="`${$t('inputs.enter')} ${$t('inputs.phone')}`"
+            @update="updatePhoneNumber" />
+        </div> -->
 
+        <div class="space-y-2" style="margin-top:15px"><label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for=":ra:-form-item"> {{ $t('contact.phone') }}</label><input type="tel"
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            :placeholder="$t('contact.phone_placeholder')" name="phone_number" v-model="form.phone_number">
           <small v-if="errors && 'phone_number' in errors" class="text-sm text-danger">
             {{ errors['phone_number'][0] }}
           </small>
         </div>
-        <div class="form-group col-lg-12">
-          <label for="specialty">{{ $t('inputs.specialty') }}</label>
-          <input id="specialty" v-model="form.specialty" :placeholder="$t('inputs.specialty_placeholder')" type="text">
-          <small v-if="errors && 'specialty' in errors" class="text-sm text-danger">{{
-            errors['specialty'][0] }}</small>
+        <div class="space-y-2" style="margin-top:15px"><label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for=":rb:-form-item"> {{ $t('contact.message') }}</label><textarea
+            class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[120px]"
+            :placeholder="$t('contact.message_placeholder')" v-model="form.message" name="message" id=":rb:-form-item"
+            aria-describedby=":rb:-form-item-description"></textarea>
+
+          <small v-if="errors && 'message' in errors" class="text-sm text-danger">{{ errors['message'][0] }}</small>
+
         </div>
+
         <div class="form-group col-lg-12">
-          <button class="btn btn-primary w-100 zindex1" name="submit" type="submit">
-            {{ $t('actions.send_message') }}
+          <button style="margin-top: 15px;"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+            name="submit" type="submit">
+            {{ $t('contact.send_button') }}
           </button>
         </div>
       </div>
@@ -62,7 +73,7 @@ export default {
         country_code: null,
         phone: null,
         phone_number: null,
-        specialty: null
+        message: null
       },
       translations: {
         phoneNumberLabel: this.$t('inputs.phone_number_placeholder'),
@@ -77,7 +88,7 @@ export default {
     async submitForm() {
       this.emptyInitialAlerts();
       try {
-        const response = await this.$axios.post('/api/new_consultant_request', this.form)
+        const response = await this.$axios.post('/api/edmovinn/new_consultant_request', this.form)
         this.alert_message = response.data.message;
         this.alert_type = response.data.success ? 'alert-success' : 'alert-danger';
         this.errors = response.data.errors;
@@ -94,9 +105,9 @@ export default {
         this.errors = e.response.data.errors;
       }
 
-    //   setTimeout(() => {
-    //     this.emptyInitialAlerts();
-    //   }, 5000);
+      //   setTimeout(() => {
+      //     this.emptyInitialAlerts();
+      //   }, 5000);
     },
     resetFormData() {
       this.form = {
@@ -104,7 +115,7 @@ export default {
         country_code: null,
         phone: null,
         phone_number: null,
-        specialty: null
+        message: null
       };
     },
     emptyInitialAlerts() {
@@ -112,7 +123,7 @@ export default {
       this.alert_type = null;
       this.errors = {};
     },
-    updatePhoneNumber({countryCode, formattedNumber}) {
+    updatePhoneNumber({ countryCode, formattedNumber }) {
       this.form.country_code = countryCode;
       this.form.phone_number = formattedNumber;
 
@@ -126,4 +137,8 @@ export default {
   }
 };
 </script>
-
+<style>
+.text-danger {
+  color: #be2626;
+}
+</style>

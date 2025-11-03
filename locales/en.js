@@ -61,7 +61,7 @@ export default {
   'footer': {
     'description'    : 'Your trusted partner for premium student accommodation in Turkey.',
     'quickLinksTitle': ' ',
-    'contact'         : {
+    'contact'        : {
       'email'  : 'operations@edmovinn.com',
       'phone'  : '+905550772000',
       'address': 'Mehmet Akif, 4.Can Sk No: 36-38, 34307 Küçükçekmece/İstanbul'
@@ -71,7 +71,7 @@ export default {
   },
 
   
-    // ///////////////////// contact page /////////////////////////
+        // ///////////////////// contact page /////////////////////////
 
   'contact': {
     'title'                 : 'Contact us directly',
@@ -85,6 +85,8 @@ export default {
     'message'               : 'Request',
     'first_name_placeholder': 'Enter your first name',
     'last_name_placeholder' : 'Enter your last name',
+    'full_name'             : 'Full Name',
+    'full_name_placeholder' : 'Enter your full name',
     'email_placeholder'     : 'Enter your email address',
     'phone_placeholder'     : 'Enter your phone number ',
     'message_placeholder'   : 'Tell us about your accommodation needs or send your questions or feedback...',
@@ -95,34 +97,34 @@ export default {
     'phone_label'           : 'Phone',
     'office_label'          : 'Office',
 
-    'office_hours'          : 'Working Hours',
-    'weekdays'              : 'Monday to Friday',
-    'weekdays_hours'        : 'From 10:00 AM to 6:00 PM',
-    'saturday'              : 'Saturday',
-    'saturday_hours'        : 'Closed',
-    'sunday'                : 'Sunday',
-    'sunday_hours'          : 'Closed'
+    'office_hours'  : 'Working Hours',
+    'weekdays'      : 'Monday to Friday',
+    'weekdays_hours': 'From 10:00 AM to 6:00 PM',
+    'saturday'      : 'Saturday',
+    'saturday_hours': 'Closed',
+    'sunday'        : 'Sunday',
+    'sunday_hours'  : 'Closed'
   },
 
  "about": {
-    "title": "About Us",
-    "intro": "Edmov Inn is an intelligent platform for managing and booking student residences in Türkiye. It is designed to make the process of finding suitable accommodation easier, safer, and smarter. We believe that a student residence is not just a place to stay but the beginning of a complete student experience. That’s why we developed an AI-powered system to help students find the ideal housing option based on university location, budget, and lifestyle.",
+    "title"  : "About Us",
+    "intro"  : "Edmov Inn is an intelligent platform for managing and booking student residences in Türkiye. It is designed to make the process of finding suitable accommodation easier, safer, and smarter. We believe that a student residence is not just a place to stay but the beginning of a complete student experience. That’s why we developed an AI-powered system to help students find the ideal housing option based on university location, budget, and lifestyle.",
     "gallery": "Gallery",
-    "vision": {
+    "vision" : {
       "title": "Our Vision",
-      "text": "To be the leading platform for smart student housing in Türkiye by offering a complete booking experience that combines technology, trust, and comfort. Our goal is to make choosing a residence an easy and reliable step that contributes to students’ stability and academic success."
+      "text" : "To be the leading platform for smart student housing in Türkiye by offering a complete booking experience that combines technology, trust, and comfort. Our goal is to make choosing a residence an easy and reliable step that contributes to students’ stability and academic success."
     },
     "mission": {
       "title": "Our Mission",
-      "text": "To simplify university students’ lives through a platform that brings together all housing options in one place — supported by a smart user interface, precise verification processes, and secure, flexible payment methods. Our mission is to provide a smooth and comfortable experience for every student, from searching to moving in."
+      "text" : "To simplify university students’ lives through a platform that brings together all housing options in one place — supported by a smart user interface, precise verification processes, and secure, flexible payment methods. Our mission is to provide a smooth and comfortable experience for every student, from searching to moving in."
     },
     "how": {
       "title": "How We Work",
-      "text": "Edmov Inn operates with an intelligent recommendation system that analyzes student data and preferences to suggest the best housing options in terms of location, price, and services. Each residence is verified and licensed before being listed on the platform to ensure the highest standards of reliability and quality. Through a simple dashboard, students can track every step of their booking, payment, and move-in process with ease."
+      "text" : "Edmov Inn operates with an intelligent recommendation system that analyzes student data and preferences to suggest the best housing options in terms of location, price, and services. Each residence is verified and licensed before being listed on the platform to ensure the highest standards of reliability and quality. Through a simple dashboard, students can track every step of their booking, payment, and move-in process with ease."
     },
 
     },
-    /////////////////////// filter section /////////////////////////
+        /////////////////////// filter section /////////////////////////
   filter: {
     title   : 'Filters',
     hide    : 'Hide Filters',
@@ -257,7 +259,7 @@ export default {
     'support'       : 'Support Services'
   },
 
-    // ///////////////////// contact page /////////////////////////
+        // ///////////////////// contact page /////////////////////////
   'cart': {
     'breadcrumb_home'  : 'Home',
     'breadcrumb_cart'  : 'Cart',
