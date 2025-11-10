@@ -85,6 +85,10 @@
                                     d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12">
                                 </path>
                             </svg>
+                            <span
+                                class="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                                {{ cartCount }}
+                            </span>
                         </button>
                     </a>
 
@@ -106,59 +110,36 @@
         </div>
     </header>
 </template>
-
 <script>
 export default {
     data() {
         return {
             isLangOpen: false,
-            isMenuOpen: false,
+            cartCount: 0,
         }
     },
-    directives: {
-        outside: {
-            beforeMount(el, binding) {
-                el.clickOutsideEvent = function (event) {
-                    if (!(el === event.target || el.contains(event.target))) {
-                        binding.value()
-                    }
-                }
-                document.addEventListener('click', el.clickOutsideEvent)
-            },
-            unmounted(el) {
-                document.removeEventListener('click', el.clickOutsideEvent)
-            },
-        },
+    mounted() {
+        this.loadCartCount()
+
+        window.addEventListener('cart-updated', (e) => {
+            this.cartCount = e.detail.count
+        })
     },
     methods: {
+        loadCartCount() {
+            const stored = JSON.parse(localStorage.getItem("cartRooms")) || []
+            this.cartCount = stored.reduce((sum, item) => sum + (item.quantity || 1), 0)
+        },
         async switchLanguage(lang) {
             this.isLangOpen = false
             localStorage.setItem('preferred_language', lang)
 
-            try {
-                let newPath = '/'
-                if (lang === 'ar') {
-                    newPath = '/ar'
-                } else if (lang === 'tr') {
-                    newPath = '/tr'
-                }
-                window.location.href = newPath
-            } catch (error) {
-                console.error('Error switching language:', error)
-            }
+            let newPath = '/'
+            if (lang === 'ar') newPath = '/ar'
+            else if (lang === 'tr') newPath = '/tr'
+
+            window.location.href = newPath
         },
-    },
+    }
 }
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.15s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-</style>

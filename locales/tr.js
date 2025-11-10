@@ -68,13 +68,11 @@ export default {
     'madeWith': '© All rights reserved'
   },
 
-
-
   contact: {
-    title                 : 'Bize Ulaşın',
-    subtitle              : 'Bizi arayın, e-posta gönderin veya doğrudan talep oluşturun — ekibimiz size destek olmaya hazır.',
-    form_title            : 'Doğrudan bizimle iletişime geçin',
-    form_description      : 'Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapacağız.',
+    title           : 'Bize Ulaşın',
+    subtitle        : 'Bizi arayın, e-posta gönderin veya doğrudan talep oluşturun — ekibimiz size destek olmaya hazır.',
+    form_title      : 'Doğrudan bizimle iletişime geçin',
+    form_description: 'Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapacağız.',
 
     first_name            : 'Ad',
     last_name             : 'Soyad',
@@ -87,42 +85,41 @@ export default {
     phone_placeholder     : 'Telefon numaranızı girin ',
     message_placeholder   : 'Konaklama ihtiyaçlarınızı, sorularınızı veya yorumlarınızı bize yazın...',
     send_button           : 'Mesaj Gönder',
-    
-    info_title            : 'İletişim Bilgileri',
-    info_description      : 'Ya da aşağıdaki bilgiler üzerinden bizimle iletişime geçebilirsiniz:',
 
-    email_label           : 'E-posta',
-    phone_label           : 'Telefon',
-    office_label          : 'Ofis',
+    info_title      : 'İletişim Bilgileri',
+    info_description: 'Ya da aşağıdaki bilgiler üzerinden bizimle iletişime geçebilirsiniz:',
 
-    office_hours          : 'Çalışma Saatleri',
-    weekdays              : 'Pazartesi - Cuma',
-    weekdays_hours        : '10:00 - 18:00',
-    saturday              : 'Cumartesi',
-    saturday_hours        : 'Kapalı',
-    sunday                : 'Pazar',
-    sunday_hours          : 'Kapalı'
+    email_label : 'E-posta',
+    phone_label : 'Telefon',
+    office_label: 'Ofis',
+
+    office_hours  : 'Çalışma Saatleri',
+    weekdays      : 'Pazartesi - Cuma',
+    weekdays_hours: '10:00 - 18:00',
+    saturday      : 'Cumartesi',
+    saturday_hours: 'Kapalı',
+    sunday        : 'Pazar',
+    sunday_hours  : 'Kapalı'
   },
-  
-  "about": {
-    "title": "Hakkımızda",
-    "intro": "Edmov Inn, Türkiye’deki öğrenci yurtlarının yönetimi ve rezervasyonu için tasarlanmış akıllı bir platformdur. Uygun yurdu bulma sürecini daha kolay, güvenli ve akıllı hale getirmek için geliştirilmiştir. Biz, öğrenci yurdunun yalnızca bir konaklama alanı olmadığını, aynı zamanda bütünsel bir öğrenci deneyiminin başlangıcı olduğunu düşünüyoruz. Bu nedenle, öğrencilerin üniversite konumu, bütçesi ve yaşam tarzına göre en uygun yurdu bulmalarına yardımcı olmak için yapay zekâ destekli bir sistem geliştirdik.",
-    "gallery": "Galeri",
-    "vision": {
-      "title": "Vizyonumuz",
-      "text": "Türkiye’de akıllı öğrenci yurtları alanında lider platform olmak; teknolojiyi, güveni ve konforu bir araya getiren bütünsel bir rezervasyon deneyimi sunmak. Amacımız, yurt seçimini öğrencinin akademik başarısına katkı sağlayan kolay ve güvenilir bir adım haline getirmektir."
-    },
-    "mission": {
-      "title": "Misyonumuz",
-      "text": "Üniversite öğrencilerinin yaşamını kolaylaştırmak için tüm yurt seçeneklerini tek bir çatı altında toplayan bir platform sunuyoruz. Akıllı bir kullanıcı arayüzü, titiz doğrulama süreçleri ve güvenli, esnek ödeme seçenekleriyle desteklenmiştir. Amacımız, öğrencinin araştırma anından yurt yerleşimine kadar rahat ve sorunsuz bir deneyim yaşamasını sağlamaktır."
-    },
-    "how": {
-      "title": "Nasıl Çalışıyoruz",
-      "text": "Edmov Inn, öğrencinin verilerini ve tercihlerini analiz eden akıllı bir öneri sistemiyle çalışır ve konum, fiyat ve hizmet açısından en uygun seçenekleri sunar. Her yurt, platforma eklenmeden önce lisans ve onay süreçlerinden geçirilir; bu da en yüksek güvenilirlik ve kalite standartlarını garanti eder. Kullanıcı dostu panelimiz sayesinde öğrenci, rezervasyon, ödeme ve yerleşim adımlarının her birini kolayca takip edebilir."
-    }
-},
 
-  
+  'about': {
+    'title'  : 'Hakkımızda',
+    'intro'  : 'Edmov Inn, Türkiye’deki öğrenci yurtlarının yönetimi ve rezervasyonu için tasarlanmış akıllı bir platformdur. Uygun yurdu bulma sürecini daha kolay, güvenli ve akıllı hale getirmek için geliştirilmiştir. Biz, öğrenci yurdunun yalnızca bir konaklama alanı olmadığını, aynı zamanda bütünsel bir öğrenci deneyiminin başlangıcı olduğunu düşünüyoruz. Bu nedenle, öğrencilerin üniversite konumu, bütçesi ve yaşam tarzına göre en uygun yurdu bulmalarına yardımcı olmak için yapay zekâ destekli bir sistem geliştirdik.',
+    'gallery': 'Galeri',
+    'vision' : {
+      'title': 'Vizyonumuz',
+      'text' : 'Türkiye’de akıllı öğrenci yurtları alanında lider platform olmak; teknolojiyi, güveni ve konforu bir araya getiren bütünsel bir rezervasyon deneyimi sunmak. Amacımız, yurt seçimini öğrencinin akademik başarısına katkı sağlayan kolay ve güvenilir bir adım haline getirmektir.'
+    },
+    'mission': {
+      'title': 'Misyonumuz',
+      'text' : 'Üniversite öğrencilerinin yaşamını kolaylaştırmak için tüm yurt seçeneklerini tek bir çatı altında toplayan bir platform sunuyoruz. Akıllı bir kullanıcı arayüzü, titiz doğrulama süreçleri ve güvenli, esnek ödeme seçenekleriyle desteklenmiştir. Amacımız, öğrencinin araştırma anından yurt yerleşimine kadar rahat ve sorunsuz bir deneyim yaşamasını sağlamaktır.'
+    },
+    'how': {
+      'title': 'Nasıl Çalışıyoruz',
+      'text' : 'Edmov Inn, öğrencinin verilerini ve tercihlerini analiz eden akıllı bir öneri sistemiyle çalışır ve konum, fiyat ve hizmet açısından en uygun seçenekleri sunar. Her yurt, platforma eklenmeden önce lisans ve onay süreçlerinden geçirilir; bu da en yüksek güvenilirlik ve kalite standartlarını garanti eder. Kullanıcı dostu panelimiz sayesinde öğrenci, rezervasyon, ödeme ve yerleşim adımlarının her birini kolayca takip edebilir.'
+    }
+  },
+
   filter: {
     title   : 'Filtreler',
     hide    : 'Filtreleri Gizle',
@@ -297,5 +294,88 @@ export default {
 
     'full_name'            : 'Tam Ad',
     'full_name_placeholder': 'Tam adınızı girin'
-  }
+  },
+  'notification': {
+    'added_to_cart': 'Sepete Eklendi'
+  },
+  'cart': {
+'breadcrumb_home'         : 'Ana Sayfa',
+'breadcrumb_cart'         : 'Sepet',
+'empty_title'             : 'Sepetiniz boş',
+'empty_description'       : 'Konaklamalarımızı göz atın ve sepetinize bazı odalar ekleyin.',
+'browse_button'           : 'Konaklamalara Göz At',
+'Accommodation / Location': 'Konaklama / Konum',
+'Price'                   : 'Fiyat',
+'Deposit'                 : 'Depozito',
+'Quantity'                : 'Miktar',
+'Total'                   : 'Toplam',
+"Continue Shopping"       : "Alışverişe Devam Et",
+"Proceed to Checkout"     : "Ödeme İşlemine Devam Et",
+"Order Summary": "Sipariş Özeti",
+"Deposit": "Depozito",
+"Subtotal": "Ara Toplam"
+  },
+  pages: {
+    sign_up: {
+      title      : 'Hesap Oluştur',
+      description: 'Edmov platformunda hesap oluşturmak için bilgilerinizi girin'
+    },
+    login: {
+      title      : 'Giriş Yap',
+      description: 'Giriş yapmak için bilgilerinizi girin'
+    },
+    verify: {
+      title               : 'Hesap Doğrulama',
+      description         : 'Telefonunuza gönderilen doğrulama kodunu girin',
+      did_not_receive_code: 'Doğrulama kodunu almadınız mı?'
+    },
+    changeMobile: {
+      title        : 'Cep Numaranızı Değiştirin',
+      description  : 'Cep numaranızı değiştirmek için aşağıdaki alanı doldurun',
+      note_discount: 'Cep numaranızı değiştirin'
+    },
+    forgotPassword: {
+      title      : 'Şifremi Unuttum',
+      description: 'Şifrenizi sıfırlamak için telefon numaranızı girin'
+    },
+    resetPassword: {
+      title      : 'Şifreyi Sıfırla',
+      description: 'Yeni şifrenizi girin'
+    },
+    checkout: {
+      breadcrumb_checkout          : 'Ödeme',
+      payment_method_title         : 'Ödeme Yöntemi',
+      payment_method_description   : 'Tercih ettiğiniz ödeme yöntemini seçin',
+      personal_info_title          : 'Kişisel Bilgiler',
+      personal_info_description    : 'Lütfen kişisel bilgilerinizi doldurun',
+      emergency_contact_title      : 'Acil Durum İletişim Bilgileri',
+      emergency_contact_description: 'Lütfen acil durumda iletişim kurulabilecek bir kişi belirtin',
+      continue_button              : 'Şartlar ve Koşullara Devam Et'
+    }
+  },
+  payment_methods: {
+    bank_transfer: {
+      label      : 'Doğrudan Banka Havalesi',
+      description: 'Lütfen çeki Mağaza Adı, Mağaza Caddesi, Mağaza Şehri, Mağaza Eyaleti / İlçesi, Mağaza Posta Kodu adresine gönderin.'
+    }
+  },
+  auth: {
+    remember_me        : 'Beni hatırla',
+    have_account       : 'Hesabınız yok mu?',
+    do_have_account    : 'Zaten hesabınız var mı?',
+    sing_up            : 'Kayıt Ol',
+    sing_up_new        : 'Yeni Hesap Oluştur',
+    sing_in            : 'Giriş Yap',
+    forget_password    : 'Şifremi Unuttum?',
+    Or                 : 'Veya',
+    Corporate          : 'Şirket',
+    Individual         : 'Bireysel',
+    sign_up_as         : 'Kayıt türü',
+    create_account     : 'Yeni Hesap Oluştur',
+    remembered_password: 'Şifrenizi hatırladınız mı?',
+    reset_password     : 'Şifreyi Sıfırla'
+  },
+  login_with_google  : 'Google ile giriş yap',
+  login_with_facebook: 'Facebook ile giriş yap'
+
 }

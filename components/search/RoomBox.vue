@@ -106,13 +106,11 @@
                     <a class="flex-1" :href="localePath('/rooms/' + room.slug)">
                         <button
                             class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full text-xs sm:text-sm">
-                            {{ $t('actions.see_more') }}
-                        </button></a>
-                    <button @click="sendWhatsAppMessage(room)" :disabled="!room.availability"
+                            {{ $t('actions.see_more') }} </button></a>
+                    <button @click="addToCart(room)" :disabled="!room.availability"
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 flex-1 text-xs sm:text-sm">
                         {{ room.availability ? $t('actions.book_now') : $t('actions.book_close') }}
                     </button>
-
                 </div>
             </div>
         </div>
@@ -146,12 +144,32 @@ export default {
         addToCart(room) {
             if (!room.availability) return;
 
-            const cart = JSON.parse(localStorage.getItem('cartRooms')) || [];
-            cart.push(room);
+            let cart = JSON.parse(localStorage.getItem('cartRooms')) || [];
+
+            const existingRoom = cart.find(item => item.id === room.id);
+
+            if (existingRoom) {
+                existingRoom.quantity = (existingRoom.quantity || 1) + 1;
+            } else {
+                cart.push({
+                    id: room.id,
+                    name: room.name,
+                    price: room.price,
+                    image: room.image,
+                    slug: room.slug,
+                    accommodation: room.accommodation?.name || '',
+                    available_from: room.available_from,
+                    quantity: 1
+                });
+            }
+
             localStorage.setItem('cartRooms', JSON.stringify(cart));
 
-            window.dispatchEvent(new CustomEvent('cart-updated', { detail: { count: cart.length } }));
+            window.dispatchEvent(new CustomEvent('cart-updated', { detail: { count: cart.reduce((sum, item) => sum + item.quantity, 0) } }));
+
+            this.$successAlert(this.$t('notification.added_to_cart'));
         },
+
         openModal(roomId, roomName) {
             if (!this.$auth.loggedIn) {
                 localStorage.setItem('redirect', this.localePath({ name: 'dashboard-rooms-slug', params: { slug: this.room.slug } }));
@@ -173,7 +191,7 @@ export default {
         sendWhatsAppMessage(room) {
             if (!room.availability) return;
 
-            const phoneNumber = "905550772000"; // رقم الواتساب بدون +
+            const phoneNumber = "905550772000";
 
             const message = this.$t('whatsapp.message', {
                 room: room.name,

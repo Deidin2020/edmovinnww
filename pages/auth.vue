@@ -38,7 +38,7 @@
                                     <!-- method chooser (Email / Phone) -->
                                     <div class="space-y-2">
                                         <label class="text-sm font-medium leading-none">{{ $t('auth.sign_in_with')
-                                        }}</label>
+                                            }}</label>
                                         <div class="flex rounded-md border overflow-hidden">
                                             <button type="button"
                                                 :class="['inline-flex items-center justify-center gap-2 flex-1 px-4 py-2 h-10', method === 'email' ? 'bg-primary text-primary-foreground' : 'hover:bg-accent']"

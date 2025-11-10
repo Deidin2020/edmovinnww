@@ -2,32 +2,18 @@
   <div class="app-input form-group">
     <label class="form-label">{{ label }}</label>
 
-    <label
-      class="icon-on-label"
-      v-if="icon"
-      @click="$emit('click.icon')"
-    >
-      <img :src="icon"  alt="edmov" title="edmov"  />
+    <label class="icon-on-label" v-if="icon" @click="$emit('click.icon')">
+      <img :src="icon" alt="edmov" title="edmov" />
     </label>
 
-    <input
-        v-model="internalValue"
-        :type="type"
-        class="form-control"
-        :placeholder="placeholder || `${$t('inputs.enter')} ${label}`"
-        @change="clearError"
-        @input="$emit('input', $event.target.value);"
-        :disabled="disabled"
-        :required="required"
-    />
+    <input v-model="internalValue" :type="type"
+      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      :placeholder="placeholder || `${$t('inputs.enter')} ${label}`" @change="clearError"
+      @input="$emit('input', $event.target.value);" :disabled="disabled" :required="required" />
 
-    <label
-        class="end-icon"
-        v-if="end_icon"
-        @click="$emit('click.endIcon')"
-    >
+    <label class="end-icon" v-if="end_icon" @click="$emit('click.endIcon')">
       <slot name="end_icon" @click="$emit('click.endIcon')">
-        <img :src="end_icon"  alt="edmov" title="edmov"  />
+        <img :src="end_icon" alt="edmov" title="edmov" />
       </slot>
     </label>
 
@@ -67,10 +53,10 @@ export default {
       type: Boolean,
       default: false
     },
-      required: {
-        type: Boolean,
-        default: false,
-      }
+    required: {
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {

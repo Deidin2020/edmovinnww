@@ -17,7 +17,7 @@ const dangerAlert = Swal.mixin({
 
 const successAlert = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'bottom-end',
     showConfirmButton: false,
     timer: 4000,
     timerProgressBar: true,
