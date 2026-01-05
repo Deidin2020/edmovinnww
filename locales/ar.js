@@ -284,40 +284,21 @@ export default {
   'whatsapp': {
     'message': 'مرحبًا 👋\nأرغب في حجز الغرفة التالية:\n\n🏠 الغرفة: {room}\n🏢 السكن: {accommodation}\n📍 الموقع: {location}\n💰 السعر: {price} {currency} / {payment_per}\n💵 التأمين: {deposit} {currency}\n📅 متاح من: {available_from}\n📐 المساحة: {size} م²\n\nيرجى تزويدي بمزيد من التفاصيل، شكرًا لك!'
   },
-  'auth': {
-    'welcome' : 'مرحبًا بك',
-    'subtitle': 'سجّل الدخول إلى حسابك أو أنشئ حسابًا جديدًا',
-
-    'sign_in': 'تسجيل الدخول',
-    'sign_up': 'إنشاء حساب',
-
-    'sign_in_with': 'تسجيل الدخول باستخدام',
-    'email'       : 'البريد الإلكتروني',
-    'phone'       : 'رقم الهاتف',
-
-    'email_address'    : 'عنوان البريد الإلكتروني',
-    'email_placeholder': 'أدخل بريدك الإلكتروني',
-
-    'password'            : 'كلمة المرور',
-    'password_placeholder': 'أدخل كلمة المرور',
-
-    'forgot_password': 'هل نسيت كلمة المرور؟',
-
-    'or_continue'        : 'أو المتابعة عبر',
-    'sign_in_with_google': 'تسجيل الدخول باستخدام Google',
-
-    'phone_number'     : 'رقم الهاتف',
-    'phone_placeholder': 'أدخل رقم هاتفك',
-
-    'pin'            : 'رمز التحقق (PIN)',
-    'pin_placeholder': 'أدخل رمز التحقق المرسل إليك',
-
-    'full_name'            : 'الاسم الكامل',
-    'full_name_placeholder': 'أدخل اسمك الكامل'
-  },
+ 
 
   'notification': {
-    'added_to_cart': 'تمت الإضافة إلى السلة'
+    'added_to_cart': 'تمت الإضافة إلى السلة',
+          log_out                    : 'Logged out successfully',
+    uploaded_successfully      : 'Uploaded successfully',
+    applied_successfully       : 'Applied successfully',
+    updated_successfully       : 'Updated successfully',
+    register_successfully      : 'SignUp successfully',
+    login_successfully         : 'Logged in successfully',
+    password_reset_successfully: 'Password reset successfully',
+    error_occurred             : 'Error occurred',
+    mobile_password_error      : 'mobile or password is incorrect',
+    invalid_code               : 'Invalid code',
+    success                    : 'Done successfully'
   },
   inputs: {
     full_name                   : 'الاسم الكامل',
@@ -402,7 +383,37 @@ auth: {
   sign_up_as         : 'التسجيل كـ',
   create_account     : 'إنشاء حساب جديد',
   remembered_password: 'تذكرت كلمة المرور؟',
-  reset_password     : 'إعادة تعيين كلمة المرور'
+  reset_password     : 'إعادة تعيين كلمة المرور',
+    'welcome' : 'مرحبًا بك',
+    'subtitle': 'سجّل الدخول إلى حسابك أو أنشئ حسابًا جديدًا',
+
+    'sign_in': 'تسجيل الدخول',
+    'sign_up': 'إنشاء حساب',
+
+    'sign_in_with': 'تسجيل الدخول باستخدام',
+    'email'       : 'البريد الإلكتروني',
+    'phone'       : 'رقم الهاتف',
+
+    'email_address'    : 'عنوان البريد الإلكتروني',
+    'email_placeholder': 'أدخل بريدك الإلكتروني',
+
+    'password'            : 'كلمة المرور',
+    'password_placeholder': 'أدخل كلمة المرور',
+
+    'forgot_password': 'هل نسيت كلمة المرور؟',
+
+    'or_continue'        : 'أو المتابعة عبر',
+    'sign_in_with_google': 'تسجيل الدخول باستخدام Google',
+
+    'phone_number'     : 'رقم الهاتف',
+    'phone_placeholder': 'أدخل رقم هاتفك',
+
+    'pin'            : 'رمز التحقق (PIN)',
+    'pin_placeholder': 'أدخل رمز التحقق المرسل إليك',
+
+    'full_name'            : 'الاسم الكامل',
+    'full_name_placeholder': 'أدخل اسمك الكامل'
+  
 },
 login_with_google  : 'الدخول بحساب جوجل',
 login_with_facebook: 'الدخول بحساب فيسبوك'

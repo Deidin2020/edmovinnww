@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  middleware: ['auth', 'profile_not_completed'],
+  middleware: ['auth'],
 };
 </script>

@@ -264,56 +264,36 @@ export default {
     message: 'Merhaba 👋\nAşağıdaki odayı rezerve etmek istiyorum:\n\n🏠 Oda: {room}\n🏢 Konaklama: {accommodation}\n📍 Konum: {location}\n💰 Fiyat: {price} {currency} / {payment_per}\n💵 Depozito: {deposit} {currency}\n📅 Uygunluk Başlangıcı: {available_from}\n📐 Boyut: {size} m²\n\nLütfen daha fazla bilgi sağlayın. Teşekkürler!'
   },
 
-  'auth': {
-    'welcome' : 'Hoş geldiniz',
-    'subtitle': 'Hesabınıza giriş yapın veya yeni bir hesap oluşturun',
-
-    'sign_in': 'Giriş Yap',
-    'sign_up': 'Kayıt Ol',
-
-    'sign_in_with': 'Şununla giriş yap',
-    'email'       : 'E-posta',
-    'phone'       : 'Telefon',
-
-    'email_address'    : 'E-posta Adresi',
-    'email_placeholder': 'E-posta adresinizi girin',
-
-    'password'            : 'Şifre',
-    'password_placeholder': 'Şifrenizi girin',
-
-    'forgot_password': 'Şifrenizi mi unuttunuz?',
-
-    'or_continue'        : 'Veya şununla devam edin',
-    'sign_in_with_google': 'Google ile giriş yap',
-
-    'phone_number'     : 'Telefon Numarası',
-    'phone_placeholder': 'Telefon numaranızı girin',
-
-    'pin'            : 'Doğrulama Kodu (PIN)',
-    'pin_placeholder': 'Size gönderilen kodu girin',
-
-    'full_name'            : 'Tam Ad',
-    'full_name_placeholder': 'Tam adınızı girin'
-  },
   'notification': {
-    'added_to_cart': 'Sepete Eklendi'
+    'added_to_cart': 'Sepete Eklendi',
+          log_out                    : 'Logged out successfully',
+    uploaded_successfully      : 'Uploaded successfully',
+    applied_successfully       : 'Applied successfully',
+    updated_successfully       : 'Updated successfully',
+    register_successfully      : 'SignUp successfully',
+    login_successfully         : 'Logged in successfully',
+    password_reset_successfully: 'Password reset successfully',
+    error_occurred             : 'Error occurred',
+    mobile_password_error      : 'mobile or password is incorrect',
+    invalid_code               : 'Invalid code',
+    success                    : 'Done successfully'
   },
   'cart': {
-'breadcrumb_home'         : 'Ana Sayfa',
-'breadcrumb_cart'         : 'Sepet',
-'empty_title'             : 'Sepetiniz boş',
-'empty_description'       : 'Konaklamalarımızı göz atın ve sepetinize bazı odalar ekleyin.',
-'browse_button'           : 'Konaklamalara Göz At',
-'Accommodation / Location': 'Konaklama / Konum',
-'Price'                   : 'Fiyat',
-'Deposit'                 : 'Depozito',
-'Quantity'                : 'Miktar',
-'Total'                   : 'Toplam',
-"Continue Shopping"       : "Alışverişe Devam Et",
-"Proceed to Checkout"     : "Ödeme İşlemine Devam Et",
-"Order Summary": "Sipariş Özeti",
-"Deposit": "Depozito",
-"Subtotal": "Ara Toplam"
+    'breadcrumb_home'         : 'Ana Sayfa',
+    'breadcrumb_cart'         : 'Sepet',
+    'empty_title'             : 'Sepetiniz boş',
+    'empty_description'       : 'Konaklamalarımızı göz atın ve sepetinize bazı odalar ekleyin.',
+    'browse_button'           : 'Konaklamalara Göz At',
+    'Accommodation / Location': 'Konaklama / Konum',
+    'Price'                   : 'Fiyat',
+    'Deposit'                 : 'Depozito',
+    'Quantity'                : 'Miktar',
+    'Total'                   : 'Toplam',
+    'Continue Shopping'       : 'Alışverişe Devam Et',
+    'Proceed to Checkout'     : 'Ödeme İşlemine Devam Et',
+    'Order Summary'           : 'Sipariş Özeti',
+    'Deposit'                 : 'Depozito',
+    'Subtotal'                : 'Ara Toplam'
   },
   pages: {
     sign_up: {
@@ -373,7 +353,27 @@ export default {
     sign_up_as         : 'Kayıt türü',
     create_account     : 'Yeni Hesap Oluştur',
     remembered_password: 'Şifrenizi hatırladınız mı?',
-    reset_password     : 'Şifreyi Sıfırla'
+    reset_password     : 'Şifreyi Sıfırla',
+    'welcome'          : 'Hoş geldiniz',
+    'subtitle'         : 'Hesabınıza giriş yapın veya yeni bir hesap oluşturun',
+    'sign_in': 'Giriş Yap',
+    'sign_up': 'Kayıt Ol',
+    'sign_in_with': 'Şununla giriş yap',
+    'email'       : 'E-posta',
+    'phone'       : 'Telefon',
+    'email_address'    : 'E-posta Adresi',
+    'email_placeholder': 'E-posta adresinizi girin',
+    'password'            : 'Şifre',
+    'password_placeholder': 'Şifrenizi girin',
+    'forgot_password': 'Şifrenizi mi unuttunuz?',
+    'or_continue'        : 'Veya şununla devam edin',
+    'sign_in_with_google': 'Google ile giriş yap',
+    'phone_number'     : 'Telefon Numarası',
+    'phone_placeholder': 'Telefon numaranızı girin',
+    'pin'            : 'Doğrulama Kodu (PIN)',
+    'pin_placeholder': 'Size gönderilen kodu girin',
+    'full_name'            : 'Tam Ad',
+    'full_name_placeholder': 'Tam adınızı girin'
   },
   login_with_google  : 'Google ile giriş yap',
   login_with_facebook: 'Facebook ile giriş yap'

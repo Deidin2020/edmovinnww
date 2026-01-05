@@ -146,7 +146,7 @@
         <div class="mt-8 bg-white rounded-lg border border-border p-6">
           <div class="flex justify-between items-center text-xl font-bold mb-4">
             <span>{{ $t('cart.Total') }}:</span>
-            <span class="text-primary">{{ finalTotal }} $</span>
+            <span class="text-primary">{{ finalTotal }} {{ currency }}</span>
           </div>
           <div class="flex flex-col sm:flex-row gap-4">
             <a class="flex-1" :href="localePath('/search')"><button
@@ -178,7 +178,12 @@ export default {
       return this.cart.reduce((sum, r) => this.cleanPrice(r.price.deposit) * r.quantity, 0);
     },
     finalTotal() {
-      return this.subtotal + this.totalDeposit;
+      return this.cart.reduce((sum, room) => {
+        return sum + this.roomTotal(room);
+      }, 0);
+    },
+    currency() {
+      return this.cart.length ? this.cart[0].price.currency : '';
     }
   },
   mounted() {
@@ -188,6 +193,11 @@ export default {
     cleanPrice(value) {
       if (!value) return 0;
       return Number(value.toString().replace(/[^0-9.-]+/g, '')) || 0;
+    },
+    roomTotal(room) {
+      const price = this.cleanPrice(room.price.price);
+      const deposit = this.cleanPrice(room.price.deposit);
+      return (price + deposit) * room.quantity;
     },
     loadCart() {
       const stored = JSON.parse(localStorage.getItem("cartRooms")) || [];

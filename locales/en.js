@@ -281,40 +281,19 @@ export default {
   'whatsapp': {
     'message': 'Hello 👋\nI would like to book the following room:\n\n🏠 Room: {room}\n🏢 Accommodation: {accommodation}\n📍 Location: {location}\n💰 Price: {price} {currency} / {payment_per}\n💵 Deposit: {deposit} {currency}\n📅 Available From: {available_from}\n📐 Size: {size} m²\n\nPlease provide more details. Thank you!'
   },
-  'auth': {
-    'welcome': 'Welcome',
-    'subtitle': 'Sign in to your account or create a new one',
-
-    'sign_in': 'Sign In',
-    'sign_up': 'Sign Up',
-
-    'sign_in_with': 'Sign in with',
-    'email': 'Email',
-    'phone': 'Phone',
-
-    'email_address': 'Email Address',
-    'email_placeholder': 'Enter your email address',
-
-    'password': 'Password',
-    'password_placeholder': 'Enter your password',
-
-    'forgot_password': 'Forgot password?',
-
-    'or_continue': 'Or continue with',
-    'sign_in_with_google': 'Sign in with Google',
-
-    'phone_number': 'Phone Number',
-    'phone_placeholder': 'Enter your phone number',
-
-    'pin': 'Verification Code (PIN)',
-    'pin_placeholder': 'Enter the code sent to you',
-
-    'full_name': 'Full Name',
-    'full_name_placeholder': 'Enter your full name'
-  },
-
   'notification': {
-    'added_to_cart': 'Added to Cart'
+    'added_to_cart': 'Added to Cart',
+      log_out                    : 'Logged out successfully',
+    uploaded_successfully      : 'Uploaded successfully',
+    applied_successfully       : 'Applied successfully',
+    updated_successfully       : 'Updated successfully',
+    register_successfully      : 'SignUp successfully',
+    login_successfully         : 'Logged in successfully',
+    password_reset_successfully: 'Password reset successfully',
+    error_occurred             : 'Error occurred',
+    mobile_password_error      : 'mobile or password is incorrect',
+    invalid_code               : 'Invalid code',
+    success                    : 'Done successfully'
   },
    inputs: {
     full_name                   : 'Full Name',
@@ -385,8 +364,40 @@ payment_methods: {
     description: 'Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.'
   }
 },
-auth: {
-  remember_me        : 'Remember me',
+login_with_google  : 'Login with Google',
+login_with_facebook: 'Login with Facebook',
+  'auth': {
+    'welcome': 'Welcome',
+    'subtitle': 'Sign in to your account or create a new one',
+
+    'sign_in': 'Sign In',
+    'sign_up': 'Sign Up',
+
+    'sign_in_with': 'Sign in with',
+    'email': 'Email',
+    'phone': 'Phone',
+
+    'email_address': 'Email Address',
+    'email_placeholder': 'Enter your email address',
+
+    'password': 'Password',
+    'password_placeholder': 'Enter your password',
+
+    'forgot_password': 'Forgot password?',
+
+    'or_continue': 'Or continue with',
+    'sign_in_with_google': 'Sign in with Google',
+
+    'phone_number': 'Phone Number',
+    'phone_placeholder': 'Enter your phone number',
+
+    'pin': 'Verification Code (PIN)',
+    'pin_placeholder': 'Enter the code sent to you',
+
+    'full_name': 'Full Name',
+    'full_name_placeholder': 'Enter your full name',
+
+      remember_me        : 'Remember me',
   have_account       : 'Don’t have an account?',
   do_have_account    : 'Already have an account?',
   sing_up            : 'Sign Up',
@@ -400,8 +411,5 @@ auth: {
   create_account     : 'Create New Account',
   remembered_password: 'Remembered your password?',
   reset_password     : 'Reset Password'
-},
-login_with_google  : 'Login with Google',
-login_with_facebook: 'Login with Facebook',
-
+  },
 }

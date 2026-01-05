@@ -4,11 +4,11 @@
       <div class="container">
         <div class="row row--45 align-items-center">
           <div class="col-lg-5 col-md-12 m-auto margin-top--120">
-            <FormCompleteProfile/>
+            <FormCompleteProfile />
           </div>
           <div class="col-lg-6 d-mobile-none">
             <div class="auth-thumbnail">
-              <AuthHero/>
+              <AuthHero />
             </div>
           </div>
         </div>
@@ -19,6 +19,6 @@
 
 <script>
 export default {
-  middleware: ['auth', 'profile_not_completed'],
+  middleware: ['auth'],
 };
 </script>

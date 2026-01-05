@@ -38,6 +38,7 @@ export default {
 
                 // { rel: 'stylesheet', href: '/css/extra.css' },
                 //     { rel: 'stylesheet', href: '/css/style.css' },
+                { rel: 'stylesheet', href: '/css/vue-input.css' },
                 { rel: 'stylesheet', href: '/css/index.css' },
                 { rel: 'stylesheet', href: this.$dir() !== 'rtl' ? '/css/custom.css' : '/css/custom.rtl.css' },
                 { rel: 'canonical', href: `https://edmovinn.com${this.$route.fullPath}` },

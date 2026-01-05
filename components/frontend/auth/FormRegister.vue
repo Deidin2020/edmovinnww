@@ -1,78 +1,50 @@
 <template>
-    <div>
-        <div class="row form-section col-md-10">
-            <div class="login-form-box">
-                <h3 class="title">
-                    {{ $t('pages.sign_up.title') }}
-                </h3>
+    <div class="space-y-4">
+        <form @submit.prevent="submitRegisterForm()" class="space-y-4">
+            <AppInput v-model="form.full_name" :error="errors && 'full_name' in errors ? errors['full_name'][0] : null"
+                :label="$t('inputs.full_name')" icon="/img/auth/icon-user.svg" />
+            <div class="space-y-2">
+                <label class="text-sm font-medium leading-none">{{ $t('inputs.phone') }}</label>
+                <vue-phone-number-input v-model="form.contact_number" :translations="translations" mode="international"
+                    @update="updatePhoneNumber" :default-country-code="country_code" />
 
-                <p>
-                    {{ $t('pages.sign_up.description') }}
-                </p>
+                <small v-if="errors && 'mobile' in errors" class="text-sm text-danger">
+                    {{ errors['mobile'][0] }}
+                </small>
+            </div>
+            <AppInput v-model="form.email" type="email" :error="errors && 'email' in errors ? errors['email'][0] : null"
+                :label="$t('inputs.email')" icon="/img/auth/icon-email.svg" placeholder="Email@mail.com" />
 
-                <form @submit.prevent="submitForm()">
-                    <AppInput v-model="form.full_name"
-                        :error="errors && 'full_name' in errors ? errors['full_name'][0] : null"
-                        :label="$t('inputs.full_name')" icon="/img/auth/icon-user.svg" />
+            <AppInput v-model="form.password" :error="errors && 'password' in errors ? errors['password'][0] : null"
+                :label="$t('inputs.password')" :type="passwordFieldType" icon="/img/auth/icon-password.svg" />
 
-                    <div class="form-group mobile">
-                        <label>{{ $t('inputs.phone') }}</label>
+            <AppInput v-model="form.password_confirmation"
+                :error="errors && 'password' in errors ? errors['password'][0] : null"
+                :label="$t('inputs.password_confirmation')" :type="passwordConfirmationFieldType"
+                icon="/img/auth/icon-password.svg" />
 
-                        <vue-phone-number-input v-model="form.contact_number" :translations="translations"
-                            mode="international" @update="updatePhoneNumber" :default-country-code="country_code" />
+            <div class="form-group mt-4">
+                <button
+                    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                    type="submit" :disabled="disabledButton">
+                    {{ $t('actions.sign_up') }}
+                </button>
+            </div>
+        </form>
 
-                        <small v-if="errors && 'mobile' in errors" class="text-sm text-danger">
-                            {{ errors['mobile'][0] }}
-                        </small>
-                    </div>
-
-                    <AppInput v-model="form.email" type="email"
-                        :error="errors && 'email' in errors ? errors['email'][0] : null" :label="$t('inputs.email')"
-                        icon="/img/auth/icon-email.svg" placeholder="Email@mail.com" />
-
-                    <AppInput v-model="form.password"
-                        :error="errors && 'password' in errors ? errors['password'][0] : null"
-                        :label="$t('inputs.password')" :type="passwordFieldType" icon="/img/auth/icon-password.svg" />
-
-                    <AppInput v-model="form.password_confirmation"
-                        :error="errors && 'password' in errors ? errors['password'][0] : null"
-                        :label="$t('inputs.password_confirmation')" :type="passwordConfirmationFieldType"
-                        icon="/img/auth/icon-password.svg" />
-
-                    <div class="form-group mt-4">
-                        <button class="btn btn-primary w-100 mt-15" type="submit" :disabled="disabledButton">
-                            {{ $t('actions.sign_up') }}
-                        </button>
-                    </div>
-                </form>
-
-                <div class="primary-auth-container">
-                    <div class="auth-divider">
-                        <span class="auth-divider-text">{{ $t('auth.Or') }}</span>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <GoogleLogin />
-                        </div>
-                        <div class="col-md-12">
-                            <FacebookLogin />
-                        </div>
-                    </div>
-                    <div class="primary-auth-container">
-                        <div class="row  mt-3">
-                            <div class="col-md-12">
-                                <div class="sign-helper text-center mt-3">
-                                    <p>{{ $t('auth.do_have_account') }}
-                                        <NuxtLink :to="localePath('/login')">
-                                            {{ $t('auth.sign_in') }}
-                                        </NuxtLink>
-                                    </p>
-                                </div>
-                            </div>
+        <div class="primary-auth-container">
+            <div class="primary-auth-container">
+                <div class="row  mt-3">
+                    <div class="col-md-12">
+                        <div class="sign-helper text-center mt-3">
+                            <p>{{ $t('auth.do_have_account') }}
+                                <NuxtLink :to="localePath('/login')">
+                                    {{ $t('auth.sign_in') }}
+                                </NuxtLink>
+                            </p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -110,7 +82,6 @@ export default {
                 phoneNumberLabel: this.$t('inputs.phone_number_placeholder'),
             },
         }
-
     },
     methods: {
         ...mapActions('visitor', ['fetchVisitorInfo']),
@@ -118,13 +89,17 @@ export default {
         togglePasswordVisibility(fieldType) {
             this[fieldType] = this[fieldType] === 'password' ? 'text' : 'password';
         },
-        async submitForm() {
+        async submitRegisterForm() {
             this.disabledButton = true;
             this.emptyInitialAlerts();
 
             await this.$axios.post('/api/student/register', this.form)
                 .then((res) => {
+                    console.log(res.data);
                     if (res.data.success) {
+
+                        this.$successAlert(this.$t('notification.register_successfully'));
+
                         this.loginUser().then(() => {
                             this.disabledButton = false;
                             localStorage.setItem('mobile', this.form.mobile);
