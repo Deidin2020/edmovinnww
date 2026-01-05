@@ -224,7 +224,9 @@ export default {
       if (this.cart[index].quantity > 1) {
         this.cart[index].quantity--;
       } else {
-        this.cart.splice(index, 1);
+        if (confirm(this.$t('cart.remove_confirm'))) {
+          this.cart.splice(index, 1);
+        }
       }
       this.saveCart();
     }
