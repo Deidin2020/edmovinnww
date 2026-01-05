@@ -223,8 +223,10 @@ export default {
     decreaseQty(index) {
       if (this.cart[index].quantity > 1) {
         this.cart[index].quantity--;
-        this.saveCart();
+      } else {
+        this.cart.splice(index, 1);
       }
+      this.saveCart();
     }
   }
 };
