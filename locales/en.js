@@ -1,17 +1,19 @@
 export default {
   header: {
-    home: 'Home',
-    about_us: 'About',
-    contact_us: 'Contact',
+    home         : 'Home',
+    about_us     : 'About',
+    contact_us   : 'Contact',
     discover_room: 'Discover Room',
-    language: 'Language',
-    arabic: 'Arabic',
-    turkish: 'Turkish',
-    english: 'English',
-    log_out: 'Log Out',
-    my_account: 'My Account',
-    sign_in: 'Sign In',
-    sign_up: 'Sign Up'
+    language     : 'Language',
+    arabic       : 'Arabic',
+    turkish      : 'Turkish',
+    english      : 'English',
+    log_out      : 'Log Out',
+    my_account   : 'My Account',
+    sign_in      : 'Sign In',
+    sign_up      : 'Sign Up',
+    dashboard    : 'Dashboard',
+    
   },
 
   hero: {

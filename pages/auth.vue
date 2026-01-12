@@ -53,7 +53,11 @@
                                     <small v-if="error" class="text-sm text-danger">
                                         {{ error }}
                                     </small>
-                                    <div class=" space-y-4">
+                                    <div class=" space-y-4" style="
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+">
                                         <div class="edu-form-check">
                                             <input id="remember-me" v-model="form.remember_me" type="checkbox">
                                             <label for="remember-me">{{ $t('auth.remember_me') }}</label>
@@ -71,6 +75,26 @@
                                         </button>
                                     </div>
                                 </form>
+                                <div class="primary-auth-container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <GoogleLogin />
+                                        </div>
+                                        <div class="col-md-12">
+                                            <FacebookLogin />
+                                        </div>
+                                    </div>
+                                    <div class="row  mt-3">
+                                        <div class="col-md-12">
+                                            <div class="sign-helper text-center mt-3">
+                                                <p>{{ $t('auth.have_account') }}
+                                                    <NuxtLink :to="localePath('/signup')">{{ $t('auth.sing_up') }}
+                                                    </NuxtLink>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -95,9 +119,10 @@ import { mapActions, mapGetters } from 'vuex';
 import FormRegister from '../components/frontend/auth/FormRegister.vue';
 
 export default {
+    middleware: ['guest'],
     data() {
         return {
-            activeTab: 'signin', // 'signin' or 'signup'
+            activeTab: 'signin',
             method: 'email',
             sources: null,
             form: {
@@ -116,6 +141,13 @@ export default {
     },
     mounted() {
         this.fetchVisitorInfo();
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        if (token) {
+            this.$auth.setUserToken(token);
+            this.$auth.fetchUser();
+            window.location.href = this.localePath('/dashboard');
+        }
     },
     methods: {
         ...mapActions('visitor', ['fetchVisitorInfo']),
@@ -134,19 +166,19 @@ export default {
                 }
             });
 
-            // setTimeout(() => {
-            //   if (this.$auth.loggedIn) {
-            //     const redirect = localStorage.getItem('redirect');
+            setTimeout(() => {
+                if (this.$auth.loggedIn) {
+                    const redirect = localStorage.getItem('redirect');
 
-            //     if (redirect) {
-            //       localStorage.removeItem('redirect');
+                    if (redirect) {
+                        localStorage.removeItem('redirect');
 
-            //       window.location.href = this.localePath(redirect);
-            //     } else {
-            //       window.location.href = this.localePath('/dashboard/discover');
-            //     }
-            //   }
-            // }, 500);
+                        window.location.href = this.localePath(redirect);
+                    } else {
+                        window.location.href = this.localePath('/dashboard');
+                    }
+                }
+            }, 500);
         },
         updatePhoneNumber({ countryCode, formattedNumber }) {
             this.form.country_code = countryCode;

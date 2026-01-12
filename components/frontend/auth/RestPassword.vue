@@ -30,7 +30,7 @@
           <div class="col-md-12 mt-2">
             <div class="sign-helper text-center mt-3">
               <p><i class="ri ri-arrow-right"></i>{{ $t('auth.remembered_password') }}
-                <n-link :to="localePath('/login')">{{ $t('auth.sign_in') }}</n-link>
+                <n-link :to="localePath('/auth')">{{ $t('auth.sign_in') }}</n-link>
               </p>
             </div>
           </div>
@@ -58,12 +58,12 @@ export default {
   },
   methods: {
     resetPassword() {
-      this.$axios.$post('/api/student/reset-password', this.form)
+      this.$axios.$post('/api/tenant/reset-password', this.form)
         .then(() => {
           this.$successAlert(this.$t('notification.password_reset_successfully'))
 
           setTimeout(() => {
-            this.$router.push(this.localePath('/login'))
+            this.$router.push(this.localePath('/auth'))
           }, 1000)
           //  console.log('tt')
         })

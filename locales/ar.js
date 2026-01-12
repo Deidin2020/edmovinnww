@@ -11,7 +11,8 @@ export default {
     log_out      : 'تسجيل الخروج',
     my_account   : 'حسابي',
     sign_in      : 'تسجيل الدخول',
-    sign_up      : 'إنشاء حساب جديد'
+    sign_up      : 'إنشاء حساب جديد',
+    dashboard:'لوحة التحكم',
   },
 
   hero: {

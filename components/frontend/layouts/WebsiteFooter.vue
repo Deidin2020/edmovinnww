@@ -139,22 +139,9 @@ export default {
         };
     },
     created() {
-        this.fetchMenus();
     },
     methods: {
-        async fetchMenus() {
-            try {
-                const res = await this.$axios.get('/api/where_studies', {
-                    headers: {
-                        'local': this.$i18n.locale,
-                    }
-                });
-                this.where_studies = res.data.result.items;
 
-            } catch (error) {
-                // console.error('Error fetching where studies navigation:', error);
-            }
-        },
         async newsLetterSubscribe() {
             await this.$axios
                 .post('/api/website/subscribe_news_letter', this.newsletter_form)

@@ -6,7 +6,7 @@ export const saveFiltersInBackEnd = debounce(function($axios, $auth, newFilters)
         return;
     }
 
-    return $axios.$post('/api/student/wizards', newFilters)
+    return $axios.$post('/api/tenant/wizards', newFilters)
         .then(response => {
          //   console.log(response);
         })

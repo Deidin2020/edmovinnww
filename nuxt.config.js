@@ -124,15 +124,15 @@ export default {
             local: {
                 endpoints: {
                     login: {
-                        url: '/api/student/login',
+                        url: '/api/tenant/login',
                         method: 'post'
                     },
                     logout: {
-                        url: '/api/student/logout',
+                        url: '/api/tenant/logout',
                         method: 'post'
                     },
                     user: {
-                        url: '/api/student/me',
+                        url: '/api/tenant/me',
                         method: 'get',
                     }
                 },
@@ -142,15 +142,15 @@ export default {
                     maxAge: 1800
                 },
                 user: {
-                    property: 'result.student'
+                    property: 'result.tenant'
                 }
             }
         },
 
         redirect: {
-            login: '/login',
-            home: false,
-            logout: false,
+            login   : '/auth',
+            home    : false,
+            logout  : false,
             callback: false
         }
     },

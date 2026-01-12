@@ -9,9 +9,9 @@ export default function ({ $axios, redirect, $cookiz, app }) {
         const lang = app.i18n.locale;
         
         if (lang === 'en') {
-            redirect('/login');
+            redirect('/auth');
         } else {
-            redirect('/' + lang + '/login');
+            redirect('/' + lang + '/auth');
         }
     }
   });

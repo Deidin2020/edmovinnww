@@ -5,9 +5,9 @@ export default function ({ app, redirect, route }) {
     // Redirect to the login page if the user is not authenticated
     if (!app.$auth.loggedIn) {
         if (locale === 'en') {
-            redirect('/login');
+            redirect('/auth');
         } else {
-            redirect('/' + locale + '/login');
+            redirect('/' + locale + '/auth');
         }
     }
 }

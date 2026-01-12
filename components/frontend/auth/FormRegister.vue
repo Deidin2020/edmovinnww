@@ -38,11 +38,32 @@
                     <div class="col-md-12">
                         <div class="sign-helper text-center mt-3">
                             <p>{{ $t('auth.do_have_account') }}
-                                <NuxtLink :to="localePath('/login')">
+                                <NuxtLink :to="localePath('/auth')">
                                     {{ $t('auth.sign_in') }}
                                 </NuxtLink>
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="primary-auth-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <GoogleLogin />
+                </div>
+                <div class="col-md-12">
+                    <FacebookLogin />
+                </div>
+            </div>
+            <div class="row  mt-3">
+                <div class="col-md-12">
+                    <div class="sign-helper text-center mt-3">
+                        <p>{{ $t('auth.have_account') }}
+                            <NuxtLink :to="localePath('/signup')">{{ $t('auth.sing_up') }}
+                            </NuxtLink>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -58,7 +79,7 @@ export default {
     props: {
         apiUrl: {
             type: String,
-            default: '/api/student/register'
+            default: '/api/tenant/register'
         }
     },
     data() {
@@ -93,7 +114,7 @@ export default {
             this.disabledButton = true;
             this.emptyInitialAlerts();
 
-            await this.$axios.post('/api/student/register', this.form)
+            await this.$axios.post('/api/tenant/register', this.form)
                 .then((res) => {
                     console.log(res.data);
                     if (res.data.success) {
@@ -107,6 +128,7 @@ export default {
                         });
                     }
                 }).catch((errors) => {
+                    console.log(errors);
                     // 502 that's mean there is a problem with send OTP
                     if (errors.response.status === 502) {
                         this.loginUser().then(() => {

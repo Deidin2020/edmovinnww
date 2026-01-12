@@ -1,101 +1,130 @@
 <template>
-    <div class="dashboard-student" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
-        <div id="main-wrapper">
-            <Sidebar />
-            <div class="page-wrapper">
-                <DashboardHeader />
-                <div class="body-wrapper">
-                    <Nuxt />
-                </div>
-                <SidebarMobile />
-            </div>
-        </div>
-        <footerMobile />
+    <div>
+        <HomeHeader showHeaderTop="false" />
+        <Nuxt />
+        <WebsiteFooter />
     </div>
 </template>
+
 <script>
 export default {
+    middleware: ['auth'],
     async mounted() {
-      await this.updateLanguage();
-      this.saveWizard();
+        await this.updateLanguage();
     },
     methods: {
-      async updateLanguage() {
-        const currentLang = this.$i18n.locale;
-          const currentPath = this.$route.fullPath;
-          if (currentLang === 'ar' && !currentPath.startsWith('/ar')) {
-              localStorage.setItem('preferred_language', 'ar');
-              this.$i18n.locale = 'ar';
-          } else if (currentLang !== 'ar' && currentPath.startsWith('/ar')) {
-              localStorage.setItem('preferred_language', 'en');
-              this.$i18n.locale = 'en';
-          }
-      },
-        saveWizard() {
-            const savedWizard = localStorage.getItem('savedWizard');
-
-            if (savedWizard) {
-                const wizardData = JSON.parse(savedWizard);
-
-                this.savedWizardToDatabase(wizardData);
+        async updateLanguage() {
+            const currentLang = this.$i18n.locale;
+            const currentPath = this.$route.fullPath;
+            if (currentLang === 'ar' && !currentPath.startsWith('/ar')) {
+                localStorage.setItem('preferred_language', 'ar');
+                this.$i18n.locale = 'ar';
+            }
+            else if (currentLang !== 'ar' && currentPath.startsWith('/ar')) {
+                localStorage.setItem('preferred_language', 'en');
+                this.$i18n.locale = 'en';
             }
         },
-        savedWizardToDatabase(wizardData) {
-            this.$axios.$post('/api/student/wizards', wizardData)
-                .then(response => {
-                  //  console.log('Wizard data saved successfully:', response.data);
-                    localStorage.removeItem('savedWizard');
-                })
-                .catch(error => {
-                   // console.error('Error saving wizard data:', error);
-                });
-        }
     },
-    middleware: ['auth', 'profile_completed', 'verified'],
     head() {
         return {
             htmlAttrs: {
-                lang: this.$i18n.locale,
-                dir: this.$i18n.locale,
+                lang: this.$i18n.local,
+                dir: this.$i18n.locale === 'ar' ? 'rtl' : 'ltr',
             },
-            bodyAttrs: {
-                'data-sidebartype': 'mini-sidebar'
-            },
+            meta: [
+                { name: 'robots', content: 'noindex, nofollow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+            ],
             link: [
-                { rel: 'stylesheet', href: '/dashboard/css/styles.css?v=1' },
-                { rel: 'stylesheet', href: '/dashboard/css/custom.css?v=22' },
-                { rel: 'stylesheet', href: this.$dir() !== 'rtl' ? '/dashboard/css/custom.css' : '/dashboard/css/custom.rtl.css' },
+
+                // { rel: 'stylesheet', href: '/css/extra.css' },
+                //     { rel: 'stylesheet', href: '/css/style.css' },
+                { rel: 'stylesheet', href: '/css/vue-input.css' },
+                { rel: 'stylesheet', href: '/css/index.css' },
+                { rel: 'stylesheet', href: this.$dir() !== 'rtl' ? '/css/custom.css' : '/css/custom.rtl.css' },
+                { rel: 'canonical', href: `https://edmovinn.com${this.$route.fullPath}` },
+                { rel: 'alternate', hreflang: 'en', href: `https://edmovinn.com` },
+                { rel: 'alternate', hreflang: 'tr', href: `https://edmovinn.com/tr` },
+                { rel: 'alternate', hreflang: 'ar', href: `https://edmovinn.com/ar` },
             ],
             script: [
-                // { src: '/dashboard/js/jquery.js', body: true },
-                {src: '/dashboard/js/vendor.min.js', body: true},
-                {src: '/dashboard/js/simplebar.min.js', body: true},
-                {src: '/dashboard/js/theme/app.minisidebar.init.js', body: true},
-                {src: '/dashboard/js/theme/theme.js', body: true},
-                {src: '/dashboard/js/theme/app.min.js', body: true},
-                {src: 'https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js', body: true},
                 {
-                    hid: 'gtm-script',
-                    innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2X95CJZ');`,
-                    type: 'text/javascript',
-                    charset: 'utf-8'
-                    },
-                    {
-                            hid: 'gtm-dataLayer',
-                            innerHTML: `
-                                window.dataLayer = window.dataLayer || [];
-                                if (${this.$auth?.user?.id}) {
-                                    window.dataLayer.push({
-                                        'event': 'login',
-                                        'userId': ${this.$auth?.user?.id}
-                                    });
-                                }
-                            `,
-                            type: 'text/javascript',
-                            charset: 'utf-8',
+                    type: 'application/ld+json',
+                    json: {
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "name": "Edmov",
+                        "description": "Welcome to edmov, the innovative EdTech platform revolutionizing the way students find and apply to their dream schools.",
+                        "url": "https://www.edmovinn.com",
+                        "logo": "https://edmovinn.com/img/edmovinn-logo-Main.png",
+                        "sameAs": [
+                            "https://www.youtube.com/@edmovcom",
+                            "https://x.com/i/flow/login?redirect_after_login=%2Fedmovcom",
+                            "https://www.instagram.com/edmovcom/?igshid=MTIxdnVrbzBkZDNkaw",
+                            "https://www.linkedin.com/company/edmov/",
+                            "https://www.facebook.com/edmovar"
+                        ],
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+90 555 044 80 00",
+                            "contactType": "Customer Service",
+                            "areaServed": "TR",
+                            "availableLanguage": "Turkish"
                         },
-            ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "123 Edmov Street",
+                            "addressLocality": "Istanbul",
+                            "addressRegion": "TR",
+                            "postalCode": "34000",
+                            "addressCountry": "Turkey"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "41.0082",
+                            "longitude": "28.9784"
+                        },
+                        "openingHoursSpecification": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday"
+                            ],
+                            "opens": "09:00",
+                            "closes": "18:00"
+                        }
+                    }
+                },
+                {
+                    type: 'application/ld+json',
+                    json: {
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Edmov",
+                        "description": "Welcome to edmov, the innovative EdTech platform revolutionizing the way students find and apply to their dream schools.",
+                        "url": "https://www.edmovinn.com",
+                        "logo": "https://edmovinn.com/img/edmovinn-logo-Main.png",
+                        "sameAs": [
+                            "https://www.youtube.com/@edmovcom",
+                            "https://x.com/i/flow/login?redirect_after_login=%2Fedmovcom",
+                            "https://www.instagram.com/edmovcom/?igshid=MTIxdnVrbzBkZDNkaw",
+                            "https://www.linkedin.com/company/edmov/",
+                            "https://www.facebook.com/edmovar"
+                        ],
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+90 555 044 80 00",
+                            "contactType": "Customer Service",
+                            "areaServed": "TR",
+                            "availableLanguage": "Turkish"
+                        }
+                    }
+                },
+            ]
         };
-    },
+    }
 };
 </script>
