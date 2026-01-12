@@ -116,8 +116,6 @@
 <script>
 
 import { mapActions, mapGetters } from 'vuex';
-import FormRegister from '../components/frontend/auth/FormRegister.vue';
-
 export default {
     middleware: ['guest'],
     data() {

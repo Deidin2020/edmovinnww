@@ -20,8 +20,10 @@
             :label="$t('inputs.confirmation_new_password')" icon="/img/auth/icon-password.svg" type="password" />
 
           <div class="form-group pt-3">
-            <button class="btn btn-primary w-100 mt-15" type="button" @click="resetPassword"> {{
-              $t('auth.reset_password') }}
+            <button
+              class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+              type="button" @click="resetPassword"> {{
+                $t('auth.reset_password') }}
             </button>
           </div>
         </form>

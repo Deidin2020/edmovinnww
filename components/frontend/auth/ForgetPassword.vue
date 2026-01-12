@@ -30,7 +30,9 @@
                     </div>
 
                     <div class="form-group pt-5">
-                        <button type="button" class="btn btn-primary w-100 mt-15 mt-15" @click="forgotPassword">
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                            @click="forgotPassword">
                             {{ $t('actions.continue') }}
                         </button>
                     </div>

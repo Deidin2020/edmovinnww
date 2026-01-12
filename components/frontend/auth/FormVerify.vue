@@ -1,60 +1,43 @@
 <template>
   <div>
-    <div class="row form-section col-md-10">
-      <div class="login-form-box mt-5 pt-5">
-        <h3 class="title">
-          {{ $t('pages.verify.title') }}
-        </h3>
-
-        <p>
-          {{ $t('pages.verify.description') }}
-          <span class="text-primary">
-            {{ form?.mobile }}
-            <span class="text-dark" @click="editMobile" style="cursor:pointer; font-weight: 600">
-              ({{ $t('edit') }})
-            </span>
+    <div class="flex flex-col space-y-1.5 p-6 text-center">
+      <h3 class="tracking-tight text-2xl font-bold"> {{ $t('pages.verify.title') }}</h3>
+      <p class="text-sm text-muted-foreground"> {{ $t('pages.verify.description') }}
+        <span class="text-primary">
+          {{ form?.mobile }}
+          <span class="text-dark" @click="editMobile" style="cursor:pointer; font-weight: 600">
+            ({{ $t('edit') }})
           </span>
+        </span>
+      </p>
+    </div>
+    <div class="row">
+      <OtpInput @value="form.code = $event" :is-valid="!error">
+        <template #errorMessage>
+          <small class="text-sm text-danger">
+            {{ error }}
+          </small>
+        </template>
+      </OtpInput>
+
+      <div class="form-group w-100 mt-5" style="margin-top:20px">
+        <button
+          class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+          type="button" @click="verifyMobile">
+          {{ $t('actions.verify') }}
+        </button>
+      </div>
+
+      <div class="resend pt-2 text-center w-100" style="display: flex; margin-top: 10px;">
+        <p>
+          {{ $t('pages.verify.did_not_receive_code') }}
+          <span v-if="resendTimer > 0">
+            ({{ resendTimer }}s)
+          </span>
+          <a href="#" @click.prevent="handleManualResend" v-else>
+            {{ $t('actions.resend') }}
+          </a>
         </p>
-
-        <div class="row">
-          <OtpInput
-            @value="form.code = $event"
-            :is-valid="!error"
-          >
-            <template #errorMessage>
-              <small class="text-sm text-danger">
-                {{ error }}
-              </small>
-            </template>
-          </OtpInput>
-
-          <div class="form-group w-100 mt-5">
-            <button
-              class="btn btn-primary w-100 mt-15"
-              type="button"
-              @click="verifyMobile"
-            >
-              {{ $t('actions.verify') }}
-            </button>
-          </div>
-
-          <div class="resend pt-2 text-center w-100">
-            <p>
-              {{ $t('pages.verify.did_not_receive_code') }}
-              <span v-if="resendTimer > 0">
-                ({{ resendTimer }}s)
-              </span>
-              <a
-                href="#"
-                @click.prevent="handleManualResend"
-                v-else
-              >
-                {{ $t('actions.resend') }}
-              </a>
-            </p>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -85,7 +68,7 @@ export default {
       localStorage.setItem('mobile', this.form.mobile);
     }
 
-   
+
 
   },
   methods: {
@@ -97,11 +80,11 @@ export default {
         return;
       }
 
-      this.$axios.$post('api/student/verify-mobile', this.form)
+      this.$axios.$post('api/tenant/verify-mobile', this.form)
         .then(response => {
           console.log(response);
           this.$successAlert(response.message);
-           this.$auth.fetchUser().then(() => {
+          this.$auth.fetchUser().then(() => {
             this.$router.push(this.localePath('/dashboard'));
           });
         })
@@ -110,11 +93,11 @@ export default {
         });
     },
 
-  
+
     resendCode() {
       this.removeErrorQuery();
 
-      this.$axios.$post('api/student/resend-mobile-code', { mobile: this.form.mobile })
+      this.$axios.$post('api/tenant/resend-mobile-code', { mobile: this.form.mobile })
         .then(response => {
           this.$successAlert(response.message);
           this.resendTimer = 30;

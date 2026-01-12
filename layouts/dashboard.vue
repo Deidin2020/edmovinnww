@@ -8,7 +8,8 @@
 
 <script>
 export default {
-    middleware: ['auth'],
+    middleware: ['auth', 'verified'],
+
     async mounted() {
         await this.updateLanguage();
     },

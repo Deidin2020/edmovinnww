@@ -13,54 +13,43 @@
           </span>
         </p>
         <div class="row">
-        <OtpInput
-          @value="form.code = $event"
-          :is-valid="!error"
-        >
-          <template #errorMessage>
-            <small class="text-sm text-danger">
-              {{ error }}
-            </small>
-          </template>
-        </OtpInput>
+          <OtpInput @value="form.code = $event" :is-valid="!error">
+            <template #errorMessage>
+              <small class="text-sm text-danger">
+                {{ error }}
+              </small>
+            </template>
+          </OtpInput>
 
-        <div class="form-group w-100 mt-5">
-          <button
-              class="btn btn-primary w-100 mt-15"
-              type="button"
-              @click="verifyMobile"
-          >
-            {{ $t('actions.continue') }}
-          </button>
-        </div>
+          <div class="form-group w-100 mt-5">
+            <button class="btn btn-primary w-100 mt-15" type="button" @click="verifyMobile">
+              {{ $t('actions.continue') }}
+            </button>
+          </div>
 
-            <div class="resend pt-2 text-center w-100">
-                <p>
-                    {{ $t('pages.verify.did_not_receive_code') }}
+          <div class="resend pt-2 text-center w-100">
+            <p>
+              {{ $t('pages.verify.did_not_receive_code') }}
 
-                    <span v-if="resendTimer > 0">
-              ({{ resendTimer }}s)
-            </span>
+              <span v-if="resendTimer > 0">
+                ({{ resendTimer }}s)
+              </span>
 
-                    <a
-                        href="#"
-                        @click.prevent="resendCode"
-                        v-else
-                    >
-                        {{ $t('actions.resend') }}
-                    </a>
-                </p>
-            </div>
+              <a href="#" @click.prevent="resendCode" v-else>
+                {{ $t('actions.resend') }}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    </div>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       form: {
         mobile: null,
@@ -70,7 +59,7 @@ export default {
       redirect: null,
       resendTimer: 0,
       resendInterval: null,
-      SendCode:true,
+      SendCode: true,
     }
   },
   mounted() {
@@ -85,15 +74,15 @@ export default {
     if (!this.form.mobile) {
       this.$router.push(this.localePath('/signup'))
     }
-      this.resendTimer = 30
+    this.resendTimer = 30
 
-      this.resendInterval = setInterval(() => {
-        if (this.resendTimer > 0) {
-          this.resendTimer--
-        } else {
-          clearInterval(this.resendInterval)
-        }
-      }, 1000)
+    this.resendInterval = setInterval(() => {
+      if (this.resendTimer > 0) {
+        this.resendTimer--
+      } else {
+        clearInterval(this.resendInterval)
+      }
+    }, 1000)
   },
   methods: {
     // sendVerificationCode(){
@@ -101,43 +90,43 @@ export default {
     //   this.SendCode=false;
     //   this.resendTimer = 60;
     //   },
-    verifyMobile () {
+    verifyMobile() {
       this.error = null
 
       if (!this.form.code || this.form.code.length !== 6) {
         this.error = this.$t('notification.invalid_code');
         return;
       }
-      this.$axios.$post('api/student/verify-forgot-otp', this.form)
-          .then(response => {
+      this.$axios.$post('api/tenant/verify-forgot-otp', this.form)
+        .then(response => {
           //  console.log(response)
-            this.$successAlert(response.message)
+          this.$successAlert(response.message)
 
-            localStorage.setItem('reset_token', response.result.reset_token)
+          localStorage.setItem('reset_token', response.result.reset_token)
 
-            this.$router.push(this.localePath('/auth/reset-password?reset_token=' + response.result.reset_token))
-          }).catch(error => {
-           // console.log(error)
-            this.error = error.response.data.message
-          })
+          this.$router.push(this.localePath('/auth/reset-password?reset_token=' + response.result.reset_token))
+        }).catch(error => {
+          // console.log(error)
+          this.error = error.response.data.message
+        })
     },
-    resendCode () {
-      this.$axios.$post('api/student/resend-mobile-code', { mobile: this.form.mobile })
-          .then(response => {
-            this.$successAlert(response.message)
+    resendCode() {
+      this.$axios.$post('api/tenant/resend-mobile-code', { mobile: this.form.mobile })
+        .then(response => {
+          this.$successAlert(response.message)
 
-            this.resendTimer = 30
+          this.resendTimer = 30
 
-            this.resendInterval = setInterval(() => {
-              if (this.resendTimer > 0) {
-                this.resendTimer--
-              } else {
-                clearInterval(this.resendInterval)
-              }
-            }, 1000)
-          }).catch(error => {
-            this.$dangerAlert(error.response.data.message)
-          })
+          this.resendInterval = setInterval(() => {
+            if (this.resendTimer > 0) {
+              this.resendTimer--
+            } else {
+              clearInterval(this.resendInterval)
+            }
+          }, 1000)
+        }).catch(error => {
+          this.$dangerAlert(error.response.data.message)
+        })
     }
   },
   beforeDestroy() {
